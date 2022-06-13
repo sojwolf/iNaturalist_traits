@@ -10,17 +10,26 @@ This repository hosts additional material accompanying the manuscript "Citizen s
 ### Versions
 
 1. iNaturalist
+
         1. 0.5 degrees
+
               1. ln (arithmetic mean)
               2. exp(ln) (geometric mean)
+
         2. 2 degrees
+
               1. ln (arithmetic mean)
               2. exp(ln) (geometric mean)
+
 2. sPlotOpen
+
         1. 0.5 degrees
+
               1. ln (arithmetic mean)
               2. exp(ln) (geometric mean)
+
         2. 2 degrees
+        
               1. ln (arithmetic mean)
               2. exp(ln) (geometric mean)
 
