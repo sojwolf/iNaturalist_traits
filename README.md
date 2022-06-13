@@ -13,25 +13,25 @@ This repository hosts additional material accompanying the manuscript "Citizen s
 
         1. 0.5 degrees
 
-              1. ln (arithmetic mean)
-              2. exp(ln) (geometric mean)
+              1. ln
+              2. exp(ln)
 
         2. 2 degrees
 
-              1. ln (arithmetic mean)
-              2. exp(ln) (geometric mean)
+              1. ln
+              2. exp(ln)
 
 2. sPlotOpen
 
         1. 0.5 degrees
 
-              1. ln (arithmetic mean)
-              2. exp(ln) (geometric mean)
+              1. ln
+              2. exp(ln)
 
         2. 2 degrees
-        
-              1. ln (arithmetic mean)
-              2. exp(ln) (geometric mean)
+
+              1. ln
+              2. exp(ln) 
 
 ### Load in Python
 
