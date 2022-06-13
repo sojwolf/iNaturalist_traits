@@ -1,5 +1,28 @@
 # Citizen science plant observations encode global trait patterns
 
+This repository hosts additional material accompanying the manuscript "Citizen science plant observations encode global trait patterns":
+
+  1. The entire workflow documentaion: https://sojwolf.github.io/iNaturalist_traits/
+  2. GeoTiff trait maps based on iNaturalist observations and sPlotOpen observaitons, respectively
+
+## Trait maps
+
+### Versions
+
+1. iNaturalist
+        1. 0.5 degrees
+              1. ln (arithmetic mean)
+              2. exp(ln) (geometric mean)
+        2. 2 degrees
+              1. ln (arithmetic mean)
+              2. exp(ln) (geometric mean)
+2. sPlotOpen
+        1. 0.5 degrees
+              1. ln (arithmetic mean)
+              2. exp(ln) (geometric mean)
+        2. 2 degrees
+              1. ln (arithmetic mean)
+              2. exp(ln) (geometric mean)
 
 ### Load in Python
 
