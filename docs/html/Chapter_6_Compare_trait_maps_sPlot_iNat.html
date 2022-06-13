@@ -1,0 +1,2497 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare sPlotOpen and iNaturalist trait maps &#8212; Citizen science plant observations encode global trait patterns</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Density of observations/plots in climate space" href="Chapter_9_Observation_density_in_climate_space.html" />
+    <link rel="prev" title="Make GeoTiff trait maps" href="Chapter_5_Make_trait_maps.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Citizen science plant observations encode global trait patterns</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Header%20Preprocessing.html">
+   Preprocessing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_1_Preprocessing_iNaturalist_data.html">
+     Preprocessing iNaturalist data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_2_Create_TRY_Summary_Statistics_per_species.html">
+     Create TRY summary statistics per species
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_3_Link_iNaturalist_observations_to_TRY.html">
+     Link iNaturalist observations to TRY
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_4_sPlotOpen_Preprocessing.html">
+     sPlotOpen Preprocessing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_5_Make_trait_maps.html">
+   Make GeoTiff trait maps
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Compare sPlotOpen and iNaturalist trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_9_Observation_density_in_climate_space.html">
+   Density of observations/plots in climate space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_7_Density_vs_Difference.html">
+   Density vs. Difference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_10_Differences_among_biomes.html">
+   Differences among biomes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_11_Growth_Forms_Coverage.html">
+   Growth forms coverage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_8_Compare%20to%20Published%20Trait%20Maps.html">
+   Compare sPlotOpen to published trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_14_Closer_Look_at_Schiller_map.html">
+   Comparing iNaturalist to Schiller maps
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Header%20Buffer.html">
+   Alternative approach: Aggregating observations in buffers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_12_Buffers_around_sPlots.html">
+     Buffers around sPlots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_13_Correlation_Buffers.html">
+     Calculate correlation of sPlot CWM and iNaturalist averages
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Chapter_6_Compare_trait_maps_sPlot_iNat.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/sojwolf/iNaturalist_traits"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/sojwolf/iNaturalist_traits/issues/new?title=Issue%20on%20page%20%2FChapter_6_Compare_trait_maps_sPlot_iNat.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sojwolf/iNaturalist_traits/master?urlpath=tree/docs/Chapter_6_Compare_trait_maps_sPlot_iNat.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-data">
+   Load Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualize-trait-maps">
+   Visualize trait maps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-to-maps-created-using-r-raster-load-traitmaps-from-geotiff-data">
+     Compare to maps created using R
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       raster
+      </span>
+     </code>
+     : Load traitmaps from geotiff data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grid-mean-trait-values-at-different-resolutions">
+   Grid mean trait values at different resolutions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#check-function-at-2-degree-resolution">
+     Check function at 2 degree resolution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculate-averages-for-different-resolutions">
+     Calculate averages for different resolutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculate-weighted-r">
+   Calculate weighted r
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determine-slope-of-the-correlation">
+   Determine slope of the correlation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-correlation-plots-for-all-traits-at-2-degree-resolution">
+   Plot correlation plots for all traits at 2 degree resolution
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculate-axes-ranges">
+     Calculate axes ranges
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-scatterplots-for-all-traits">
+     Plot scatterplots for all traits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-top-traits-only">
+     Plot top traits only
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Compare sPlotOpen and iNaturalist trait maps</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-data">
+   Load Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualize-trait-maps">
+   Visualize trait maps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-to-maps-created-using-r-raster-load-traitmaps-from-geotiff-data">
+     Compare to maps created using R
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       raster
+      </span>
+     </code>
+     : Load traitmaps from geotiff data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grid-mean-trait-values-at-different-resolutions">
+   Grid mean trait values at different resolutions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#check-function-at-2-degree-resolution">
+     Check function at 2 degree resolution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculate-averages-for-different-resolutions">
+     Calculate averages for different resolutions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculate-weighted-r">
+   Calculate weighted r
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determine-slope-of-the-correlation">
+   Determine slope of the correlation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-correlation-plots-for-all-traits-at-2-degree-resolution">
+   Plot correlation plots for all traits at 2 degree resolution
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculate-axes-ranges">
+     Calculate axes ranges
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-scatterplots-for-all-traits">
+     Plot scatterplots for all traits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-top-traits-only">
+     Plot top traits only
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="compare-splotopen-and-inaturalist-trait-maps">
+<h1>Compare sPlotOpen and iNaturalist trait maps<a class="headerlink" href="#compare-splotopen-and-inaturalist-trait-maps" title="Permalink to this headline">¶</a></h1>
+<p>We will create trait maps with the iNaturalist observation data and evaluate the maps using the sPlotOpen data.</p>
+<p>This section covers:</p>
+<ul class="simple">
+<li><p>Load Data</p></li>
+<li><p>Visualizing the trait maps - a first look</p></li>
+<li><p>Grid mean trait values at different resolutions</p></li>
+<li><p>Calculate weighted r</p></li>
+<li><p>Determine slope of correlation</p></li>
+<li><p>Plot correlation plots at 2 degree resolution</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># packages</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LogNorm</span><span class="p">,</span> <span class="n">Normalize</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">MaxNLocator</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">BoundaryNorm</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+
+<span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Proj</span> <span class="c1"># allows for different projections </span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">shape</span> <span class="c1"># for calculating areas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="load-data">
+<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iNat_TRY</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;iNat_TRY_log.csv&quot;</span><span class="p">)</span>
+<span class="n">iNat_TRY</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gbifID</th>
+      <th>scientificName</th>
+      <th>decimalLatitude</th>
+      <th>decimalLongitude</th>
+      <th>eventDate</th>
+      <th>dateIdentified</th>
+      <th>Dispersal unit length</th>
+      <th>Leaf Area</th>
+      <th>SLA</th>
+      <th>Leaf C</th>
+      <th>...</th>
+      <th>Leaf delta15N</th>
+      <th>Leaf N P ratio</th>
+      <th>Leaf P</th>
+      <th>Plant Height</th>
+      <th>Seed mass</th>
+      <th>Seed length</th>
+      <th>Seeds per rep. unit</th>
+      <th>Stem conduit density</th>
+      <th>SSD</th>
+      <th>Conduit element length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1229615436</td>
+      <td>Commelina communis</td>
+      <td>35.987483</td>
+      <td>-79.057546</td>
+      <td>2013-07-07T00:00:00</td>
+      <td>2013-07-07T20:33:11</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>2.5362</td>
+      <td>0.536493</td>
+      <td>NaN</td>
+      <td>2.13771</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3384000233</td>
+      <td>Commelina communis</td>
+      <td>42.093762</td>
+      <td>-75.923660</td>
+      <td>2021-08-23T13:06:06</td>
+      <td>2021-09-17T21:15:37</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>2.5362</td>
+      <td>0.536493</td>
+      <td>NaN</td>
+      <td>2.13771</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 24 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sPlot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;sPlotOpen/cwm_loc.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sPlot</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PlotObservationID</th>
+      <th>TraitCoverage_cover</th>
+      <th>Species_richness</th>
+      <th>TraitCoverage_pa</th>
+      <th>Leaf Area</th>
+      <th>SSD</th>
+      <th>SLA</th>
+      <th>Leaf C</th>
+      <th>Leaf N per mass</th>
+      <th>Leaf P</th>
+      <th>...</th>
+      <th>Height_shrubs_lowest</th>
+      <th>Height_herbs_average</th>
+      <th>Height_herbs_lowest</th>
+      <th>Height_herbs_highest</th>
+      <th>SoilClim_PC1</th>
+      <th>SoilClim_PC2</th>
+      <th>Resample_1</th>
+      <th>Resample_2</th>
+      <th>Resample_3</th>
+      <th>Resample_1_consensus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>16</td>
+      <td>0.277778</td>
+      <td>3</td>
+      <td>0.333333</td>
+      <td>3.678311</td>
+      <td>-1.047293</td>
+      <td>2.890748</td>
+      <td>6.128157</td>
+      <td>2.873263</td>
+      <td>1.114036</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-3.66</td>
+      <td>0.546</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>17</td>
+      <td>0.038462</td>
+      <td>2</td>
+      <td>0.500000</td>
+      <td>3.678311</td>
+      <td>-1.047293</td>
+      <td>2.890748</td>
+      <td>6.128157</td>
+      <td>2.873263</td>
+      <td>1.114036</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-3.66</td>
+      <td>0.546</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 86 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="visualize-trait-maps">
+<h2>Visualize trait maps<a class="headerlink" href="#visualize-trait-maps" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_grid</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">,</span> <span class="n">deg</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">})</span>
+
+    <span class="c1"># define raster shape for plotting</span>
+    <span class="n">step</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="mi">360</span><span class="o">/</span><span class="n">deg</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">bins_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="n">step</span><span class="p">)</span> 
+    <span class="n">bins_y</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="nb">int</span><span class="p">(((</span><span class="n">step</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">lon</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins_x</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">lat</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins_y</span><span class="p">)</span>
+
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+
+    <span class="n">grouped_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">variable</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">raster</span> <span class="o">=</span> <span class="n">grouped_df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s1">&#39;y_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+
+    <span class="c1"># data format</span>
+    <span class="n">data_crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+    
+    <span class="c1">#for colorbar</span>
+    <span class="n">levels</span> <span class="o">=</span> <span class="n">MaxNLocator</span><span class="p">(</span><span class="n">nbins</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">tick_values</span><span class="p">(</span><span class="n">grouped_df</span><span class="p">[</span><span class="n">variable</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">grouped_df</span><span class="p">[</span><span class="n">variable</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;YlGnBu&#39;</span><span class="p">)</span> <span class="c1"># colormap</span>
+    <span class="n">norm</span> <span class="o">=</span> <span class="n">BoundaryNorm</span><span class="p">(</span><span class="n">levels</span><span class="p">,</span> <span class="n">ncolors</span><span class="o">=</span><span class="n">cmap</span><span class="o">.</span><span class="n">N</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+    <span class="n">im_ratio</span> <span class="o">=</span> <span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">raster</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># for size of colorbar</span>
+
+    <span class="c1">#create base plot of a world map</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">())</span> <span class="c1"># I used the PlateCarree projection from cartopy</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_global</span><span class="p">()</span>
+        
+    <span class="c1">#add grid with values</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">bins_x</span><span class="p">,</span> <span class="n">bins_y</span><span class="p">,</span> <span class="n">raster</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;YlGnBu&quot;</span><span class="p">,</span> 
+                       <span class="n">vmin</span><span class="o">=</span><span class="n">grouped_df</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+                       <span class="n">vmax</span><span class="o">=</span><span class="n">grouped_df</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+                       <span class="n">transform</span><span class="o">=</span><span class="n">data_crs</span><span class="p">)</span> 
+    
+    <span class="c1">#add color bar</span>
+    <span class="k">if</span> <span class="n">log</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+            <span class="n">label</span><span class="o">=</span> <span class="s2">&quot;log &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">label</span><span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span><span class="n">fraction</span><span class="o">=</span><span class="mf">0.046</span><span class="o">*</span><span class="n">im_ratio</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.04</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+
+    <span class="c1">#add coastlines</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;110m&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+
+    <span class="c1">#set title</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span> <span class="n">variable</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">dataset_name</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To visualize the trait maps we use the custom function <code class="docutils literal notranslate"><span class="pre">plot_grid()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trait</span> <span class="o">=</span> <span class="n">iNat_TRY</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">24</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">trait</span><span class="p">:</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;../Figures/iNat_traitmap_&#39;</span> <span class="o">+</span> <span class="n">t</span> <span class="o">+</span><span class="s1">&#39;.pdf&#39;</span>
+    <span class="n">plot_grid</span><span class="p">(</span><span class="n">iNat_TRY</span><span class="p">,</span> <span class="s2">&quot;decimalLongitude&quot;</span><span class="p">,</span> <span class="s2">&quot;decimalLatitude&quot;</span><span class="p">,</span><span class="n">variable</span><span class="o">=</span><span class="n">t</span><span class="p">,</span> <span class="n">dataset_name</span><span class="o">=</span><span class="s2">&quot;iNaturalist&quot;</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_0.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_0.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_1.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_1.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_2.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_2.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_3.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_3.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_4.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_4.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_5.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_5.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_6.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_6.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_7.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_7.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_8.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_8.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_9.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_9.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_10.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_10.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_11.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_11.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_12.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_12.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_13.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_13.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_14.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_14.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_15.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_15.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_16.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_16.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_17.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_17.png" />
+</div>
+</div>
+<div class="section" id="compare-to-maps-created-using-r-raster-load-traitmaps-from-geotiff-data">
+<h3>Compare to maps created using R <code class="docutils literal notranslate"><span class="pre">raster</span></code>: Load traitmaps from geotiff data<a class="headerlink" href="#compare-to-maps-created-using-r-raster-load-traitmaps-from-geotiff-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">isfile</span><span class="p">,</span> <span class="n">join</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;./iNaturalist_traits-main/iNat_log/&quot;</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">if</span> <span class="n">isfile</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">f</span><span class="p">))]</span>
+<span class="n">files</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;iNat_Conduit.element.length_2_ln.tif&#39;,
+ &#39;iNat_Dispersal.unit.length_2_ln.tif&#39;,
+ &#39;iNat_LDMC_2_ln.tif&#39;,
+ &#39;iNat_Leaf.Area_2_ln.tif&#39;,
+ &#39;iNat_Leaf.C_2_ln.tif&#39;,
+ &#39;iNat_Leaf.N.P.ratio_2_ln.tif&#39;,
+ &#39;iNat_Leaf.N.per.area_2_ln.tif&#39;,
+ &#39;iNat_Leaf.N.per.mass_2_ln.tif&#39;,
+ &#39;iNat_Leaf.P_2_ln.tif&#39;,
+ &#39;iNat_Leaf.delta15N_2_ln.tif&#39;,
+ &#39;iNat_Leaf.fresh.mass_2_ln.tif&#39;,
+ &#39;iNat_Plant.Height_2_ln.tif&#39;,
+ &#39;iNat_SLA_2_ln.tif&#39;,
+ &#39;iNat_SSD_2_ln.tif&#39;,
+ &#39;iNat_Seed.length_2_ln.tif&#39;,
+ &#39;iNat_Seed.mass_2_ln.tif&#39;,
+ &#39;iNat_Seeds.per.rep..unit_2_ln.tif&#39;,
+ &#39;iNat_Stem.conduit.density_2_ln.tif&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cubeFile</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.tif&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">sr</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">file</span><span class="p">,</span><span class="n">engine</span> <span class="o">=</span> <span class="s2">&quot;rasterio&quot;</span><span class="p">,</span><span class="n">chunks</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">band</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">sr</span> <span class="o">=</span> <span class="n">sr</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s2">&quot;variable&quot;</span><span class="p">:</span><span class="n">name</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">sr</span>
+
+<span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">cubeFile</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">files</span><span class="p">],</span><span class="n">dim</span> <span class="o">=</span> <span class="s2">&quot;variable&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">da</span><span class="o">.</span><span class="n">band_data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;iNat_Leaf.Area_2_ln&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f9f25c954c0&gt;
+</pre></div>
+</div>
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_16_1.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_16_1.png" />
+</div>
+</div>
+<p>Plot one band of multidimensional xarray:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+
+<span class="n">axis</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+    <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">())</span>
+<span class="p">)</span>
+
+<span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;iNat_Leaf.Area_2_ln&quot;</span>
+<span class="n">im</span><span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">band_data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">variable</span> <span class="o">=</span> <span class="n">variable</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>  <span class="c1"># this is important!</span>
+    <span class="c1"># usual xarray stuff</span>
+    <span class="n">cbar_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;orientation&quot;</span><span class="p">:</span> <span class="s2">&quot;horizontal&quot;</span><span class="p">,</span> <span class="s2">&quot;shrink&quot;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">},</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;YlGnBu&#39;</span><span class="p">,</span>
+    <span class="c1">#vmin=da.band_data.sel(variable = &quot;iNat_Conduit.element.length&quot;).min(),</span>
+    <span class="c1">#vmax=da.band_data.sel(variable = &quot;iNat_Conduit.element.length&quot;).max(),</span>
+    <span class="c1">#norm=LogNorm()</span>
+
+<span class="p">)</span>
+
+<span class="n">axis</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;110m&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>  <span class="c1"># cartopy function</span>
+<span class="c1">#plt.tight_layout()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.feature_artist.FeatureArtist at 0x7f9f25d10790&gt;
+</pre></div>
+</div>
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_18_1.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_18_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">band_data</span><span class="o">.</span><span class="n">to_dataset</span><span class="p">()</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+      <th>variable</th>
+      <th>band</th>
+      <th>spatial_ref</th>
+      <th>band_data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-179.0</td>
+      <td>89.0</td>
+      <td>iNat_Conduit.element.length_2_ln</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-179.0</td>
+      <td>89.0</td>
+      <td>iNat_Dispersal.unit.length_2_ln</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-179.0</td>
+      <td>89.0</td>
+      <td>iNat_LDMC_2_ln</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-179.0</td>
+      <td>89.0</td>
+      <td>iNat_Leaf.Area_2_ln</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-179.0</td>
+      <td>89.0</td>
+      <td>iNat_Leaf.C_2_ln</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_spread</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;variable&#39;</span><span class="p">,</span><span class="n">values</span><span class="o">=</span><span class="s1">&#39;band_data&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_spread</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>variable</th>
+      <th>x</th>
+      <th>y</th>
+      <th>iNat_Conduit.element.length_2_ln</th>
+      <th>iNat_Dispersal.unit.length_2_ln</th>
+      <th>iNat_LDMC_2_ln</th>
+      <th>iNat_Leaf.Area_2_ln</th>
+      <th>iNat_Leaf.C_2_ln</th>
+      <th>iNat_Leaf.N.P.ratio_2_ln</th>
+      <th>iNat_Leaf.N.per.area_2_ln</th>
+      <th>iNat_Leaf.N.per.mass_2_ln</th>
+      <th>iNat_Leaf.P_2_ln</th>
+      <th>iNat_Leaf.delta15N_2_ln</th>
+      <th>iNat_Leaf.fresh.mass_2_ln</th>
+      <th>iNat_Plant.Height_2_ln</th>
+      <th>iNat_SLA_2_ln</th>
+      <th>iNat_SSD_2_ln</th>
+      <th>iNat_Seed.length_2_ln</th>
+      <th>iNat_Seed.mass_2_ln</th>
+      <th>iNat_Seeds.per.rep..unit_2_ln</th>
+      <th>iNat_Stem.conduit.density_2_ln</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-179.0</td>
+      <td>-89.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-179.0</td>
+      <td>-87.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-179.0</td>
+      <td>-85.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-179.0</td>
+      <td>-83.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-179.0</td>
+      <td>-81.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_spread</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(16200, 20)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="grid-mean-trait-values-at-different-resolutions">
+<h2>Grid mean trait values at different resolutions<a class="headerlink" href="#grid-mean-trait-values-at-different-resolutions" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">global_grid_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">long</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">deg</span><span class="p">,</span> <span class="n">variables</span><span class="p">):</span>
+    
+    <span class="c1"># create new dataframe to save the average value of each grid cell and variable</span>
+    <span class="n">grouped_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    
+    <span class="c1"># convert degree into step size</span>
+    <span class="n">step</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="mi">360</span><span class="o">/</span><span class="n">deg</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">bins_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="n">step</span><span class="p">)</span> 
+    <span class="n">bins_y</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="nb">int</span><span class="p">(((</span><span class="n">step</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    
+    <span class="c1"># group latitude and longitude coordinates into bins</span>
+    <span class="c1"># create new columns &#39;x_bin&#39; and &#39;y_bin&#39;</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">long</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins_x</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">lat</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins_y</span><span class="p">)</span>
+    
+    <span class="c1"># raster coordinates are in center of raster cell</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">((</span><span class="n">x</span><span class="o">.</span><span class="n">left</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">right</span><span class="p">)</span> <span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">((</span><span class="n">x</span><span class="o">.</span><span class="n">left</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">right</span><span class="p">)</span> <span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+    
+    <span class="n">grouped_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">)</span>
+    <span class="n">grouped_df</span> <span class="o">=</span> <span class="n">grouped_df</span><span class="p">[[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">]]</span>
+    
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">:</span>
+        
+        <span class="n">sub_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="n">v</span><span class="p">]]</span>
+        <span class="n">grouped_v</span> <span class="o">=</span> <span class="n">sub_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        
+        
+        <span class="n">grouped_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">grouped_df</span><span class="p">,</span> <span class="n">grouped_v</span><span class="p">,</span> 
+                    <span class="n">on</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> 
+                    <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">grouped_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="check-function-at-2-degree-resolution">
+<h3>Check function at 2 degree resolution<a class="headerlink" href="#check-function-at-2-degree-resolution" title="Permalink to this headline">¶</a></h3>
+<p>To create a dataframe with all traits and the mean log trait values per cell we call <code class="docutils literal notranslate"><span class="pre">global_grid_data()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deg</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">trait</span> <span class="o">=</span> <span class="n">iNat_TRY</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">24</span><span class="p">]</span>
+
+<span class="n">df_iNat</span> <span class="o">=</span> <span class="n">global_grid_data</span><span class="p">(</span><span class="n">iNat_TRY</span><span class="p">,</span> <span class="s1">&#39;decimalLongitude&#39;</span><span class="p">,</span> <span class="s1">&#39;decimalLatitude&#39;</span><span class="p">,</span> <span class="n">deg</span><span class="p">,</span> <span class="n">trait</span><span class="p">)</span>
+
+<span class="n">df_iNat_t</span> <span class="o">=</span> <span class="n">df_iNat</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x_bin&quot;</span><span class="p">,</span> <span class="s2">&quot;y_bin&quot;</span><span class="p">],</span> 
+                     <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">,</span> 
+                     <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Trait&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_iNat_t</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x_bin</th>
+      <th>y_bin</th>
+      <th>Trait</th>
+      <th>TraitValue_iNat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-85.0</td>
+      <td>5.0</td>
+      <td>Dispersal unit length</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-49.0</td>
+      <td>61.0</td>
+      <td>Dispersal unit length</td>
+      <td>0.893636</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-173.0</td>
+      <td>69.0</td>
+      <td>Dispersal unit length</td>
+      <td>0.893636</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.0</td>
+      <td>31.0</td>
+      <td>Dispersal unit length</td>
+      <td>0.388658</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>37.0</td>
+      <td>39.0</td>
+      <td>Dispersal unit length</td>
+      <td>1.189367</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>69313</th>
+      <td>23.0</td>
+      <td>-33.0</td>
+      <td>Conduit element length</td>
+      <td>6.299584</td>
+    </tr>
+    <tr>
+      <th>69314</th>
+      <td>147.0</td>
+      <td>-43.0</td>
+      <td>Conduit element length</td>
+      <td>6.089187</td>
+    </tr>
+    <tr>
+      <th>69315</th>
+      <td>-117.0</td>
+      <td>33.0</td>
+      <td>Conduit element length</td>
+      <td>5.760924</td>
+    </tr>
+    <tr>
+      <th>69316</th>
+      <td>115.0</td>
+      <td>23.0</td>
+      <td>Conduit element length</td>
+      <td>5.893173</td>
+    </tr>
+    <tr>
+      <th>69317</th>
+      <td>95.0</td>
+      <td>51.0</td>
+      <td>Conduit element length</td>
+      <td>5.461003</td>
+    </tr>
+  </tbody>
+</table>
+<p>69318 rows × 4 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_iNat_t</span><span class="p">[</span><span class="s1">&#39;Trait&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="calculate-averages-for-different-resolutions">
+<h3>Calculate averages for different resolutions<a class="headerlink" href="#calculate-averages-for-different-resolutions" title="Permalink to this headline">¶</a></h3>
+<p>We now compute these global grids for various grid sizes (in degrees) and all traits. We merge iNat and sPlot into one dataframe and save it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deg</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.0625</span><span class="p">]</span>
+
+
+<span class="n">trait</span> <span class="o">=</span> <span class="n">iNat_TRY</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">24</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">deg</span><span class="p">:</span>
+    <span class="n">df_iNat</span> <span class="o">=</span> <span class="n">global_grid_data</span><span class="p">(</span><span class="n">iNat_TRY</span><span class="p">,</span> <span class="s1">&#39;decimalLongitude&#39;</span><span class="p">,</span> <span class="s1">&#39;decimalLatitude&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">trait</span><span class="p">)</span>
+    
+    <span class="n">df_sPlot</span> <span class="o">=</span> <span class="n">global_grid_data</span><span class="p">(</span><span class="n">sPlot</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">trait</span><span class="p">)</span>
+    
+    
+    <span class="c1"># reshape data, so that we have only one Trait column</span>
+    <span class="n">df_iNat_t</span> <span class="o">=</span> <span class="n">df_iNat</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x_bin&quot;</span><span class="p">,</span> <span class="s2">&quot;y_bin&quot;</span><span class="p">],</span> 
+                     <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">,</span> 
+                     <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Trait&quot;</span><span class="p">)</span>
+    
+    <span class="n">df_sPlot_t</span> <span class="o">=</span> <span class="n">df_sPlot</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x_bin&quot;</span><span class="p">,</span> <span class="s2">&quot;y_bin&quot;</span><span class="p">],</span> 
+                     <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">,</span> 
+                     <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Trait&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># merge sPlot and iNat data into one dataframe</span>
+    <span class="n">df_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_sPlot_t</span><span class="p">,</span> <span class="n">df_iNat_t</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x_bin&quot;</span><span class="p">,</span> <span class="s2">&quot;y_bin&quot;</span><span class="p">,</span> <span class="s2">&quot;Trait&quot;</span><span class="p">]</span> <span class="p">)</span>
+    
+    <span class="c1"># keep only lines where we have a pixel in both datasets</span>
+    <span class="n">df_merged</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    
+    
+    <span class="c1"># save result to csv</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;grid_means_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;_deg.csv&quot;</span>
+    <span class="n">df_merged</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="calculate-weighted-r">
+<h2>Calculate weighted r<a class="headerlink" href="#calculate-weighted-r" title="Permalink to this headline">¶</a></h2>
+<p>Calculate weights per grid cell area and weighted r for all traits and all grid sizes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lat_weights</span><span class="p">(</span><span class="n">lat_unique</span><span class="p">,</span> <span class="n">deg</span><span class="p">):</span>
+    
+    <span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Proj</span>
+    <span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">shape</span>
+
+    <span class="c1"># determine weights per grid cell based on longitude</span>
+    <span class="c1"># keep only one exemplary cell at each distance from equator</span>
+    <span class="c1"># weights per approximated area of grid size depending on distance from equator</span>
+    
+    <span class="c1"># make dictionary</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">lat_unique</span><span class="p">:</span>
+        
+        <span class="c1"># the four corner points of the grid cell</span>
+        
+        <span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span> <span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="p">(</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="n">deg</span> <span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="p">(</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">p3</span> <span class="o">=</span> <span class="p">(</span><span class="n">deg</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="p">(</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">p4</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="p">(</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+        
+        <span class="c1"># Calculate polygon surface area</span>
+        <span class="c1"># https://stackoverflow.com/questions/4681737/how-to-calculate-the-area-of-a-polygon-on-the-earths-surface-using-python</span>
+        
+        <span class="c1"># Define corner points</span>
+        <span class="n">co</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span> <span class="s2">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">,</span><span class="n">p3</span><span class="p">,</span><span class="n">p4</span><span class="p">]]}</span>
+        <span class="n">lat_1</span><span class="o">=</span><span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">lat_2</span><span class="o">=</span><span class="n">p3</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">lat_0</span><span class="o">=</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">p3</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">lon_0</span><span class="o">=</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span>
+        
+        <span class="c1"># Caveat: Connot go accross equator</span>
+        <span class="n">value1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lat_1</span> <span class="o">+</span> <span class="n">lat_2</span><span class="p">)</span>
+        <span class="n">value2</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">((</span><span class="n">lat_1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lat_2</span><span class="p">))</span>
+        
+        <span class="c1"># if grid cell overlaps equator:</span>
+        <span class="k">if</span> <span class="n">value1</span> <span class="o">&lt;</span> <span class="n">value2</span><span class="p">:</span>
+            
+            <span class="n">lat_1</span><span class="o">=</span><span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">lat_2</span><span class="o">=</span><span class="mi">0</span>
+            <span class="n">lat_0</span><span class="o">=</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">lat_2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+            <span class="n">lon_0</span><span class="o">=</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span>
+            
+            <span class="c1"># Projection equal area used: https://proj.org/operations/projections/aea.html</span>
+            <span class="n">projection_string</span><span class="o">=</span><span class="s2">&quot;+proj=aea +lat_1=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lat_1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; +lat_2=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lat_2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; +lat_0=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lat_0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; +lon_0=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lon_0</span><span class="p">)</span> 
+            <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">co</span><span class="p">[</span><span class="s1">&#39;coordinates&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        
+            <span class="n">pa</span> <span class="o">=</span> <span class="n">Proj</span><span class="p">(</span><span class="n">projection_string</span><span class="p">)</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">pa</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
+            <span class="n">cop</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span> <span class="s2">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)]}</span>
+        
+            <span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">cop</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="o">/</span><span class="mi">1000000</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span>
+        
+        <span class="c1"># if grid cell is on one side of equator:</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Projection equal area used: https://proj.org/operations/projections/aea.html</span>
+            <span class="n">projection_string</span><span class="o">=</span><span class="s2">&quot;+proj=aea +lat_1=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lat_1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; +lat_2=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lat_2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; +lat_0=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lat_0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; +lon_0=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lon_0</span><span class="p">)</span> 
+            <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">co</span><span class="p">[</span><span class="s1">&#39;coordinates&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        
+            <span class="n">pa</span> <span class="o">=</span> <span class="n">Proj</span><span class="p">(</span><span class="n">projection_string</span><span class="p">)</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">pa</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
+            <span class="n">cop</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span> <span class="s2">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)]}</span>
+        
+            <span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">cop</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="o">/</span><span class="mi">1000000</span><span class="p">)</span>
+
+        
+        <span class="c1"># set coord to center of grid cell</span>
+        <span class="n">coord</span> <span class="o">=</span> <span class="n">j</span>
+        
+        <span class="c1"># map area to weights dictionary</span>
+        <span class="n">weights</span><span class="p">[</span><span class="n">coord</span><span class="p">]</span> <span class="o">=</span> <span class="n">area</span>
+    
+    <span class="c1"># convert area into proportion with area/max.area:</span>
+    <span class="n">max_area</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">weights</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        
+        <span class="n">weights</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">/</span><span class="n">max_area</span>
+        
+    <span class="k">return</span> <span class="n">weights</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">weighted_r</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col_1</span><span class="p">,</span> <span class="n">col_2</span><span class="p">,</span> <span class="n">col_lat</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">r2</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    
+    <span class="c1"># map weights to dataframe</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Weights&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col_lat</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+        
+    <span class="c1"># calculate weighted correlation </span>
+    <span class="c1"># https://www.statsmodels.org/stable/generated/statsmodels.stats.weightstats.DescrStatsW.html</span>
+    <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">statmod</span>
+    
+    <span class="n">d1</span> <span class="o">=</span> <span class="n">statmod</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">DescrStatsW</span><span class="p">(</span> <span class="n">df</span><span class="p">[[</span><span class="n">col_1</span><span class="p">,</span> <span class="n">col_2</span><span class="p">]],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Weights&#39;</span><span class="p">]</span> <span class="p">)</span>
+        
+    <span class="n">corr</span> <span class="o">=</span> <span class="n">d1</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="c1"># optional</span>
+    <span class="c1"># calculate r2</span>
+    <span class="k">if</span> <span class="n">r2</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">corr</span> <span class="o">=</span> <span class="n">corr</span><span class="o">**</span><span class="mi">2</span>
+    
+    <span class="k">return</span> <span class="n">corr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get trait names</span>
+<span class="n">filename</span><span class="o">=</span><span class="s2">&quot;grid_means_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;_deg.csv&quot;</span>
+<span class="n">raster_means</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">trait</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="s2">&quot;Trait&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calculate r for all traits and a range of resolutions:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># resolutions we want to calculate r for</span>
+<span class="n">deg</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.125</span><span class="p">,</span> <span class="mf">0.0625</span><span class="p">]</span>
+
+<span class="n">r_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">trait</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">deg</span><span class="p">:</span>
+    
+    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+    <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">statmod</span>
+    
+    <span class="c1"># open saved raster mean files</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;grid_means_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;_deg.csv&quot;</span>
+    <span class="n">raster_means</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">raster_means</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="o">~</span><span class="n">raster_means</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">])</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+    <span class="c1"># determine weights per grid cell based on longitude</span>
+    
+    <span class="n">lat_unique</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">lat_weights</span><span class="p">(</span><span class="n">lat_unique</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+    
+    <span class="c1"># initiate  </span>
+    <span class="n">r_grid</span> <span class="o">=</span> <span class="p">[]</span>  
+    
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">trait</span><span class="p">:</span>
+        <span class="c1"># subset only one trait</span>
+        <span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="n">raster_means</span><span class="p">[</span><span class="s1">&#39;Trait&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">t</span><span class="p">]</span>
+        
+        <span class="c1"># drop nan&#39;s</span>
+        <span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+        
+        <span class="c1"># calculate weighted r</span>
+        <span class="n">r_trait</span> <span class="o">=</span> <span class="n">weighted_r</span><span class="p">(</span><span class="n">raster_means_trait</span><span class="p">,</span> <span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">,</span> <span class="s2">&quot;y_bin&quot;</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+        
+        <span class="c1"># add to trait r&#39;s</span>
+        <span class="n">r_grid</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_trait</span><span class="p">)</span>
+    
+    
+    <span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">r_grid</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">r_all</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+    
+    <span class="c1"># add new series of r at a certain resolution to df </span>
+    <span class="n">r_all</span> <span class="o">=</span> <span class="n">r_all</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    
+<span class="c1"># add resolution to r-df</span>
+<span class="n">r_all</span><span class="p">[</span><span class="s1">&#39;Resolution&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.13</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_all</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dispersal unit length</th>
+      <th>Leaf Area</th>
+      <th>SLA</th>
+      <th>Leaf C</th>
+      <th>LDMC</th>
+      <th>Leaf fresh mass</th>
+      <th>Leaf N per area</th>
+      <th>Leaf N per mass</th>
+      <th>Leaf delta15N</th>
+      <th>Leaf N P ratio</th>
+      <th>Leaf P</th>
+      <th>Plant Height</th>
+      <th>Seed mass</th>
+      <th>Seed length</th>
+      <th>Seeds per rep. unit</th>
+      <th>Stem conduit density</th>
+      <th>SSD</th>
+      <th>Conduit element length</th>
+      <th>Resolution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-0.064129</td>
+      <td>0.648441</td>
+      <td>0.541325</td>
+      <td>0.313925</td>
+      <td>0.395695</td>
+      <td>0.675771</td>
+      <td>0.530652</td>
+      <td>0.410528</td>
+      <td>0.335074</td>
+      <td>0.402132</td>
+      <td>0.417266</td>
+      <td>0.573948</td>
+      <td>0.520051</td>
+      <td>0.227821</td>
+      <td>0.033105</td>
+      <td>0.694801</td>
+      <td>0.639448</td>
+      <td>0.360548</td>
+      <td>4.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-0.040254</td>
+      <td>0.591867</td>
+      <td>0.559321</td>
+      <td>0.214475</td>
+      <td>0.337698</td>
+      <td>0.593019</td>
+      <td>0.592591</td>
+      <td>0.366520</td>
+      <td>0.261048</td>
+      <td>0.459257</td>
+      <td>0.389100</td>
+      <td>0.582170</td>
+      <td>0.484310</td>
+      <td>0.261350</td>
+      <td>0.061491</td>
+      <td>0.680519</td>
+      <td>0.629418</td>
+      <td>0.319216</td>
+      <td>2.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-0.008955</td>
+      <td>0.528993</td>
+      <td>0.545211</td>
+      <td>0.281464</td>
+      <td>0.352232</td>
+      <td>0.518514</td>
+      <td>0.542192</td>
+      <td>0.412746</td>
+      <td>0.266304</td>
+      <td>0.425005</td>
+      <td>0.421088</td>
+      <td>0.579327</td>
+      <td>0.460602</td>
+      <td>0.272997</td>
+      <td>0.122855</td>
+      <td>0.635591</td>
+      <td>0.628607</td>
+      <td>0.313588</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.015484</td>
+      <td>0.443391</td>
+      <td>0.511926</td>
+      <td>0.223498</td>
+      <td>0.343284</td>
+      <td>0.426179</td>
+      <td>0.533832</td>
+      <td>0.369761</td>
+      <td>0.203682</td>
+      <td>0.356999</td>
+      <td>0.405710</td>
+      <td>0.508895</td>
+      <td>0.368398</td>
+      <td>0.250143</td>
+      <td>0.146879</td>
+      <td>0.570690</td>
+      <td>0.556945</td>
+      <td>0.278735</td>
+      <td>0.50</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.012678</td>
+      <td>0.386012</td>
+      <td>0.464901</td>
+      <td>0.208586</td>
+      <td>0.325511</td>
+      <td>0.313482</td>
+      <td>0.490444</td>
+      <td>0.350628</td>
+      <td>0.168444</td>
+      <td>0.292185</td>
+      <td>0.371618</td>
+      <td>0.424300</td>
+      <td>0.298729</td>
+      <td>0.196469</td>
+      <td>0.121625</td>
+      <td>0.494574</td>
+      <td>0.484192</td>
+      <td>0.240417</td>
+      <td>0.25</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.004708</td>
+      <td>0.325776</td>
+      <td>0.423198</td>
+      <td>0.195532</td>
+      <td>0.302716</td>
+      <td>0.244600</td>
+      <td>0.446798</td>
+      <td>0.344023</td>
+      <td>0.173674</td>
+      <td>0.272116</td>
+      <td>0.346877</td>
+      <td>0.361929</td>
+      <td>0.239897</td>
+      <td>0.172903</td>
+      <td>0.109652</td>
+      <td>0.436362</td>
+      <td>0.443396</td>
+      <td>0.200705</td>
+      <td>0.13</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>-0.006774</td>
+      <td>0.309105</td>
+      <td>0.415142</td>
+      <td>0.164298</td>
+      <td>0.308849</td>
+      <td>0.208823</td>
+      <td>0.424765</td>
+      <td>0.365924</td>
+      <td>0.195232</td>
+      <td>0.252934</td>
+      <td>0.356953</td>
+      <td>0.352254</td>
+      <td>0.236357</td>
+      <td>0.152757</td>
+      <td>0.089049</td>
+      <td>0.425663</td>
+      <td>0.415955</td>
+      <td>0.186163</td>
+      <td>0.06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Save result to <code class="docutils literal notranslate"><span class="pre">.csv</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_all</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;r_all.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Visualize different r at different resolutions as line graph (The straight lines connecting the dots only there to facilitate readibility):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;r_all.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Median correlation at 2 degree resolution</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">r_all</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.4592574614778774
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Plot </span>
+<span class="c1"># https://stackoverflow.com/questions/44941082/plot-multiple-columns-of-pandas-dataframe-using-seaborn</span>
+
+<span class="n">trait_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dispersal unit len.&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf Area&#39;</span><span class="p">,</span> <span class="s1">&#39;SLA&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf C&#39;</span><span class="p">,</span> <span class="s1">&#39;LDMC&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Leaf fresh mass&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf N per area&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf N per mass&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Leaf delta15N&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf N P ratio&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf P&#39;</span><span class="p">,</span> <span class="s1">&#39;Plant Height&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Seed mass&#39;</span><span class="p">,</span> <span class="s1">&#39;Seed length&#39;</span><span class="p">,</span> <span class="s1">&#39;Seeds per rep. unit&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Stem conduit </span><span class="se">\n</span><span class="s1">density&#39;</span><span class="p">,</span> <span class="s1">&#39;SSD&#39;</span><span class="p">,</span> <span class="s1">&#39;Conduit element len.&#39;</span><span class="p">]</span>
+
+<span class="c1"># data </span>
+<span class="n">data_dropnan</span> <span class="o">=</span> <span class="n">r_all</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="n">data_melt</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">data_dropnan</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Resolution&#39;</span><span class="p">],</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+
+<span class="c1"># change Resolution to string, so it is not interpreted as a number</span>
+<span class="n">data_melt</span> <span class="o">=</span> <span class="n">data_melt</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;Resolution&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">},</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;raise&#39;</span><span class="p">)</span> 
+
+<span class="c1"># set plotting parameters</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">)})</span> <span class="c1"># size</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">font_scale</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># make font larger</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span> <span class="c1"># plain white plot, no grids</span>
+
+<span class="c1"># initiate plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># plot all lines into one plot</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Resolution&#39;</span><span class="p">,</span> 
+            <span class="n">y</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> 
+            <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;variable&#39;</span><span class="p">,</span> 
+            <span class="n">data</span><span class="o">=</span><span class="n">data_melt</span><span class="p">,</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+            <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+            <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">label_pos</span><span class="o">=</span><span class="p">[]</span>
+
+<span class="c1"># Add the text--for each line, find the end, annotate it with a label</span>
+<span class="c1"># https://lost-stats.github.io/Presentation/Figures/line_graph_with_labels_at_the_beginning_or_end.html</span>
+
+<span class="k">for</span> <span class="n">line</span><span class="p">,</span> <span class="n">variable</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">lines</span><span class="p">,</span> <span class="n">trait_names</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">get_ydata</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">get_xdata</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+        <span class="n">y</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">get_ydata</span><span class="p">()[</span><span class="o">~</span><span class="n">line</span><span class="o">.</span><span class="n">get_ydata</span><span class="p">()</span><span class="o">.</span><span class="n">mask</span><span class="p">]),</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">continue</span> 
+    <span class="n">x</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">y</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">xy</span> <span class="ow">in</span> <span class="n">label_pos</span><span class="p">:</span>
+        <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mf">0.01</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">xy</span> <span class="ow">in</span> <span class="n">label_pos</span><span class="p">:</span>
+        <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="mf">0.015</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">variable</span><span class="o">==</span><span class="s2">&quot;Seed Mass&quot;</span><span class="p">:</span>
+        <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="mf">0.02</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">variable</span><span class="o">==</span><span class="s2">&quot;Leaf Area&quot;</span><span class="p">:</span>
+        <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="mf">0.005</span><span class="p">)</span>
+    <span class="n">label_pos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xy</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span>
+                       <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">xy</span><span class="p">),</span>
+                       <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                       <span class="n">color</span><span class="o">=</span><span class="n">line</span><span class="o">.</span><span class="n">get_color</span><span class="p">(),</span>
+                       <span class="n">xycoords</span><span class="o">=</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xaxis_transform</span><span class="p">(),</span>
+                                 <span class="n">ax</span><span class="o">.</span><span class="n">get_yaxis_transform</span><span class="p">()),</span>
+                       <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">)</span>
+    <span class="n">text_width</span> <span class="o">=</span> <span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">get_window_extent</span><span class="p">(</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">get_renderer</span><span class="p">())</span><span class="o">.</span><span class="n">transformed</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">transData</span><span class="o">.</span><span class="n">inverted</span><span class="p">())</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
+
+<span class="c1"># Format the date axis to be prettier.</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Resolution in degrees&quot;</span><span class="p">,</span>  <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span>  <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">14</span><span class="p">)</span> 
+
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_xaxis</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># save figure as pdf</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../Figures/r_vs_resolution_long.pdf&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_48_0.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_48_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="determine-slope-of-the-correlation">
+<h2>Determine slope of the correlation<a class="headerlink" href="#determine-slope-of-the-correlation" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylr2</span> <span class="kn">import</span> <span class="n">regress2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Load pixel trait means at 2 degrees:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deg</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">filename</span><span class="o">=</span><span class="s2">&quot;grid_means_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">deg</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;_deg.csv&quot;</span>
+<span class="n">raster_means</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="c1"># remove inf. values</span>
+<span class="n">raster_means</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="o">~</span><span class="n">raster_means</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">])</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+
+<span class="c1"># filter only for trait means, we don&#39;t need the counts per pixel</span>
+<span class="n">raster_means</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="n">raster_means</span><span class="p">[</span><span class="s1">&#39;Trait&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">trait</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Check method for one trait:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># subset only one trait</span>
+<span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="n">raster_means</span><span class="p">[</span><span class="s1">&#39;Trait&#39;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;Plant Height&quot;</span><span class="p">]</span>
+        
+<span class="c1"># drop nan&#39;s</span>
+<span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;TraitValue_iNat&#39;</span><span class="p">,</span> <span class="s1">&#39;TraitValue_sPlot&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">]</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">regress2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">_method_type_2</span><span class="o">=</span><span class="s2">&quot;reduced major axis&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;slope&#39;: 0.7606001314977555,
+ &#39;intercept&#39;: -0.1582780708512439,
+ &#39;r&#39;: 0.5985443572644115,
+ &#39;std_slope&#39;: 0.021256591178264863,
+ &#39;std_intercept&#39;: 0.026223999235003993,
+ &#39;predict&#39;: 10519   -1.216659
+ 10520   -0.959619
+ 10521   -0.800042
+ 10522   -0.109246
+ 10523   -0.047238
+            ...   
+ 11544   -0.731485
+ 11545   -0.584747
+ 11546   -0.868299
+ 11547   -0.820544
+ 11548   -0.791688
+ Name: TraitValue_sPlot, Length: 1030, dtype: float64}
+</pre></div>
+</div>
+</div>
+</div>
+<p>For all traits:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slopes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;slope&#39;</span><span class="p">,</span> <span class="s1">&#39;intercept&#39;</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">trait</span><span class="p">:</span>
+    <span class="c1"># subset only one trait</span>
+    <span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="n">raster_means</span><span class="p">[</span><span class="s1">&#39;Trait&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">t</span><span class="p">]</span>
+        
+    <span class="c1"># drop nan&#39;s</span>
+    <span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;TraitValue_iNat&#39;</span><span class="p">,</span> <span class="s1">&#39;TraitValue_sPlot&#39;</span><span class="p">])</span>
+    
+    <span class="c1"># filter out outliers</span>
+    <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;TraitValue_iNat&#39;</span><span class="p">,</span> <span class="s1">&#39;TraitValue_sPlot&#39;</span><span class="p">]</span> <span class="c1"># one or more</span>
+    
+    <span class="n">Q1</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+    <span class="n">Q3</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)</span>
+    <span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+
+    <span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="o">~</span><span class="p">((</span><span class="n">raster_means_trait</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">Q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span><span class="p">))</span> <span class="o">|</span><span class="p">(</span><span class="n">raster_means_trait</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">Q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span><span class="p">)))</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span>
+    
+    
+    <span class="n">x</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">]</span>
+    
+    <span class="n">results</span> <span class="o">=</span> <span class="n">regress2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">_method_type_2</span><span class="o">=</span><span class="s2">&quot;reduced major axis&quot;</span><span class="p">)</span>
+        
+    <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s2">&quot;slope&quot;</span><span class="p">]</span>
+    <span class="n">intercept</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s2">&quot;intercept&quot;</span><span class="p">]</span>
+    
+    <span class="n">slopes</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slopes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Dispersal unit length</th>
+      <th>Leaf Area</th>
+      <th>SLA</th>
+      <th>Leaf C</th>
+      <th>LDMC</th>
+      <th>Leaf fresh mass</th>
+      <th>Leaf N per area</th>
+      <th>Leaf N per mass</th>
+      <th>Leaf delta15N</th>
+      <th>Leaf N P ratio</th>
+      <th>Leaf P</th>
+      <th>Plant Height</th>
+      <th>Seed mass</th>
+      <th>Seed length</th>
+      <th>Seeds per rep. unit</th>
+      <th>Stem conduit density</th>
+      <th>SSD</th>
+      <th>Conduit element length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>slope</th>
+      <td>0.882832</td>
+      <td>1.027592</td>
+      <td>1.414497</td>
+      <td>1.238462</td>
+      <td>1.061700</td>
+      <td>1.129783</td>
+      <td>1.392226</td>
+      <td>1.077500</td>
+      <td>2.007867</td>
+      <td>1.147387</td>
+      <td>1.290807</td>
+      <td>0.760600</td>
+      <td>0.841936</td>
+      <td>1.279172</td>
+      <td>1.351475</td>
+      <td>1.435743</td>
+      <td>2.574361</td>
+      <td>0.987289</td>
+    </tr>
+    <tr>
+      <th>intercept</th>
+      <td>-0.111272</td>
+      <td>0.160015</td>
+      <td>-0.934332</td>
+      <td>-1.486539</td>
+      <td>-0.207463</td>
+      <td>0.678720</td>
+      <td>-0.126172</td>
+      <td>-0.082166</td>
+      <td>-0.464251</td>
+      <td>-0.375518</td>
+      <td>0.027418</td>
+      <td>-0.158278</td>
+      <td>0.417664</td>
+      <td>-0.642623</td>
+      <td>0.079200</td>
+      <td>-1.459013</td>
+      <td>0.914904</td>
+      <td>-0.002103</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="plot-correlation-plots-for-all-traits-at-2-degree-resolution">
+<h2>Plot correlation plots for all traits at 2 degree resolution<a class="headerlink" href="#plot-correlation-plots-for-all-traits-at-2-degree-resolution" title="Permalink to this headline">¶</a></h2>
+<p>We want to look at the scatterplots a bit closer now. The previous plot shows that we have a high correlation for a number of traits at a resolution of 2 degrees, so we choose this resolution in the following, more detailed analyses.</p>
+<div class="section" id="calculate-axes-ranges">
+<h3>Calculate axes ranges<a class="headerlink" href="#calculate-axes-ranges" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate max-min ranges</span>
+
+<span class="k">def</span> <span class="nf">min__max_ranges</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col_1</span><span class="p">,</span> <span class="n">col_2</span><span class="p">,</span> <span class="n">variable_col</span><span class="p">,</span> <span class="n">variables</span><span class="p">):</span>
+
+    <span class="n">range_all</span> <span class="o">=</span><span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">:</span>
+        <span class="n">df_sub</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">variable_col</span><span class="p">]</span><span class="o">==</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">df_sub</span> <span class="o">=</span> <span class="n">df_sub</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span> <span class="o">=</span> <span class="p">[</span><span class="n">col_1</span><span class="p">,</span> <span class="n">col_2</span><span class="p">])</span>
+    
+        <span class="n">xmin</span> <span class="o">=</span> <span class="n">df_sub</span><span class="p">[</span><span class="n">col_1</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+        <span class="n">xmax</span> <span class="o">=</span> <span class="n">df_sub</span><span class="p">[</span><span class="n">col_1</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)</span>
+    
+        <span class="n">ymin</span> <span class="o">=</span> <span class="n">df_sub</span><span class="p">[</span><span class="n">col_2</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+        <span class="n">ymax</span> <span class="o">=</span> <span class="n">df_sub</span><span class="p">[</span><span class="n">col_2</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)</span>
+    
+    
+        <span class="k">if</span> <span class="n">xmin</span><span class="o">&gt;</span><span class="n">ymin</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">ymin</span><span class="p">):</span>
+                <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">xmin</span> <span class="o">=</span> <span class="n">ymin</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+    
+        <span class="k">if</span> <span class="n">xmax</span><span class="o">&lt;</span><span class="n">ymax</span><span class="p">:</span>
+            <span class="n">xmax</span><span class="o">=</span><span class="n">ymax</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+        
+        <span class="n">range_sub</span> <span class="o">=</span> <span class="p">[</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">]</span>
+    
+        <span class="n">range_all</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">range_sub</span><span class="p">)</span>
+        
+    <span class="n">ranges</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    <span class="n">ranges</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">variables</span>
+    <span class="n">ranges</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">range_all</span><span class="p">]</span>
+    <span class="n">ranges</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">range_all</span><span class="p">]</span>
+    <span class="n">ranges</span> <span class="o">=</span> <span class="n">ranges</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;variable&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ranges</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We claculate data ranges for all traits, so that we can plot symmetrical scatterplots:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranges</span> <span class="o">=</span> <span class="n">min__max_ranges</span><span class="p">(</span><span class="n">raster_means</span><span class="p">,</span> <span class="s1">&#39;TraitValue_sPlot&#39;</span><span class="p">,</span> <span class="s1">&#39;TraitValue_iNat&#39;</span><span class="p">,</span> 
+                         <span class="n">variable_col</span><span class="o">=</span><span class="s1">&#39;Trait&#39;</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="n">trait</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ranges</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>min</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>variable</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Dispersal unit length</th>
+      <td>-0.227319</td>
+      <td>2.460527</td>
+    </tr>
+    <tr>
+      <th>Leaf Area</th>
+      <td>3.609251</td>
+      <td>9.130945</td>
+    </tr>
+    <tr>
+      <th>SLA</th>
+      <td>1.285192</td>
+      <td>3.254503</td>
+    </tr>
+    <tr>
+      <th>Leaf C</th>
+      <td>5.980399</td>
+      <td>6.249313</td>
+    </tr>
+    <tr>
+      <th>LDMC</th>
+      <td>-1.831323</td>
+      <td>-0.627124</td>
+    </tr>
+    <tr>
+      <th>Leaf fresh mass</th>
+      <td>-4.256507</td>
+      <td>1.441722</td>
+    </tr>
+    <tr>
+      <th>Leaf N per area</th>
+      <td>-0.043052</td>
+      <td>1.378253</td>
+    </tr>
+    <tr>
+      <th>Leaf N per mass</th>
+      <td>2.360681</td>
+      <td>3.430899</td>
+    </tr>
+    <tr>
+      <th>Leaf delta15N</th>
+      <td>-0.969118</td>
+      <td>2.051529</td>
+    </tr>
+    <tr>
+      <th>Leaf N P ratio</th>
+      <td>2.098447</td>
+      <td>3.175909</td>
+    </tr>
+    <tr>
+      <th>Leaf P</th>
+      <td>-0.736326</td>
+      <td>1.001090</td>
+    </tr>
+    <tr>
+      <th>Plant Height</th>
+      <td>-2.034971</td>
+      <td>3.131525</td>
+    </tr>
+    <tr>
+      <th>Seed mass</th>
+      <td>-1.488567</td>
+      <td>5.511339</td>
+    </tr>
+    <tr>
+      <th>Seed length</th>
+      <td>-0.274437</td>
+      <td>2.744297</td>
+    </tr>
+    <tr>
+      <th>Seeds per rep. unit</th>
+      <td>1.736470</td>
+      <td>12.390493</td>
+    </tr>
+    <tr>
+      <th>Stem conduit density</th>
+      <td>1.945910</td>
+      <td>7.149330</td>
+    </tr>
+    <tr>
+      <th>SSD</th>
+      <td>-1.921280</td>
+      <td>-0.072944</td>
+    </tr>
+    <tr>
+      <th>Conduit element length</th>
+      <td>5.159063</td>
+      <td>6.681987</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Now we can plot a scatter plot for each trait in one large panel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_scatterplots</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">,</span> <span class="n">col_wrap</span><span class="p">):</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+    
+    <span class="c1"># The relplot function can plot multiple variable in on large figure</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span>
+        <span class="n">col</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> 
+        <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">,</span> 
+        <span class="n">col_wrap</span><span class="o">=</span><span class="n">col_wrap</span><span class="p">,</span> 
+        <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;midnightblue&quot;</span><span class="p">,</span>
+        <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;crest&#39;</span><span class="p">,</span>
+        <span class="n">facet_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;sharey&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;sharex&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+    <span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.35</span><span class="p">)</span>
+    <span class="n">index</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">two</span> <span class="o">=</span> <span class="s2">&quot;2&quot;</span>
+    
+
+    <span class="c1"># Iterate over each subplot to customize further</span>
+    <span class="k">for</span> <span class="n">variables</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">axes_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+        <span class="c1"># Plot the 1:1 line</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axline</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+        
+        <span class="c1"># Plot the splope</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">slopes</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">variables</span><span class="p">)]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">slopes</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">variables</span><span class="p">)]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+        <span class="c1"># get min and max values </span>
+        <span class="n">x_1</span> <span class="o">=</span> <span class="n">ranges</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">variables</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">]</span>
+        <span class="c1">#x_2 = ranges.loc[variables, &quot;max&quot;]</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axline</span><span class="p">([</span><span class="n">x_1</span><span class="p">,</span> <span class="p">((</span><span class="n">m</span><span class="o">*</span><span class="n">x_1</span><span class="p">)</span><span class="o">+</span><span class="n">b</span><span class="p">)],</span> <span class="n">slope</span><span class="o">=</span><span class="n">m</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+        
+        
+        <span class="c1"># Add the title as an annotation within the plot</span>
+        <span class="k">if</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">sub_title</span><span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;r$^2$ = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">r_all</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">variables</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;y = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;x - &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sub_title</span><span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;r$^2$ = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">r_all</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">variables</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;y = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;x + &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="o">.</span><span class="mi">95</span><span class="p">,</span> <span class="n">sub_title</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
+        
+
+        <span class="n">index</span><span class="o">+=</span><span class="mi">1</span>
+        
+    <span class="k">for</span> <span class="n">variables</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">axes_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="c1"># Set the axis ranges</span>
+        <span class="n">space</span> <span class="o">=</span> <span class="p">(</span><span class="n">ranges</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">variables</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">]</span><span class="o">-</span><span class="p">[</span><span class="n">ranges</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">variables</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">]])</span> <span class="o">*</span> <span class="mf">0.2</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">ranges</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">variables</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="nb">abs</span><span class="p">(</span><span class="n">space</span><span class="p">),</span> <span class="n">ranges</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">variables</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">space</span><span class="p">))</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ranges</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">variables</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="nb">abs</span><span class="p">(</span><span class="n">space</span><span class="p">),</span> <span class="n">ranges</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">variables</span><span class="p">,</span> <span class="s2">&quot;max&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">space</span><span class="p">))</span>
+
+
+    <span class="c1"># Edit some supporting aspects of the plot</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">set_titles</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">set_axis_labels</span><span class="p">(</span><span class="s2">&quot;sPlotOpen pixels&quot;</span><span class="p">,</span> <span class="s2">&quot;iNaturalist pixels&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-scatterplots-for-all-traits">
+<h3>Plot scatterplots for all traits<a class="headerlink" href="#plot-scatterplots-for-all-traits" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_scatterplots</span><span class="p">(</span><span class="n">raster_means</span><span class="p">,</span> <span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;Trait&quot;</span><span class="p">,</span> 
+                  <span class="n">variables</span><span class="o">=</span><span class="n">trait</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">trait</span><span class="p">,</span> 
+                  <span class="n">label_x</span> <span class="o">=</span> <span class="s2">&quot;sPlotOpen pixels&quot;</span><span class="p">,</span> <span class="n">label_y</span> <span class="o">=</span> <span class="s2">&quot;iNaturalist pixels&quot;</span><span class="p">,</span>
+                 <span class="n">col_wrap</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># Save figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../Figures/corr_plots_all_r.pdf&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_70_0.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_70_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="plot-top-traits-only">
+<h3>Plot top traits only<a class="headerlink" href="#plot-top-traits-only" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select top traits</span>
+<span class="n">top_trait</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Leaf Area&#39;</span><span class="p">,</span> <span class="s1">&#39;SLA&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf fresh mass&#39;</span><span class="p">,</span> 
+               <span class="s1">&#39;Leaf N per area&#39;</span><span class="p">,</span><span class="s1">&#39;Plant Height&#39;</span><span class="p">,</span> <span class="s1">&#39;Stem conduit density&#39;</span><span class="p">]</span>
+
+<span class="n">trait_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Leaf Area (ln mm$^2$)&#39;</span><span class="p">,</span> <span class="s1">&#39;SLA (ln m$^2$/kg)&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf fresh mass (ln g)&#39;</span><span class="p">,</span> 
+               <span class="s1">&#39;Leaf N per area (ln g/m$^2$)&#39;</span><span class="p">,</span><span class="s1">&#39;Plant Height (ln m)&#39;</span><span class="p">,</span> <span class="s1">&#39;Stem cond. density (ln mm$^-$$^2$)&#39;</span><span class="p">]</span>
+
+<span class="n">raster_means_top</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="n">raster_means</span><span class="p">[</span><span class="s1">&#39;Trait&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">top_trait</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_scatterplots</span><span class="p">(</span><span class="n">raster_means_top</span><span class="p">,</span> <span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;Trait&quot;</span><span class="p">,</span> 
+                  <span class="n">variables</span><span class="o">=</span><span class="n">top_trait</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">trait_names</span><span class="p">,</span> 
+                  <span class="n">label_x</span> <span class="o">=</span> <span class="s2">&quot;sPlotOpen pixels&quot;</span><span class="p">,</span> <span class="n">label_y</span> <span class="o">=</span> <span class="s2">&quot;iNaturalist pixels&quot;</span><span class="p">,</span> <span class="n">col_wrap</span> <span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># Save figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../Figures/corr_plots_top6.pdf&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_73_0.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_73_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Chapter_5_Make_trait_maps.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Make GeoTiff trait maps</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Chapter_9_Observation_density_in_climate_space.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Density of observations/plots in climate space</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sophie Wolf et al.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

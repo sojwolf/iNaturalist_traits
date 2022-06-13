@@ -1,0 +1,1233 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare sPlotOpen to published trait maps &#8212; Citizen science plant observations encode global trait patterns</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Comparing iNaturalist to Schiller maps" href="Chapter_14_Closer_Look_at_Schiller_map.html" />
+    <link rel="prev" title="Growth forms coverage" href="Chapter_11_Growth_Forms_Coverage.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Citizen science plant observations encode global trait patterns</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Header%20Preprocessing.html">
+   Preprocessing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_1_Preprocessing_iNaturalist_data.html">
+     Preprocessing iNaturalist data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_2_Create_TRY_Summary_Statistics_per_species.html">
+     Create TRY summary statistics per species
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_3_Link_iNaturalist_observations_to_TRY.html">
+     Link iNaturalist observations to TRY
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_4_sPlotOpen_Preprocessing.html">
+     sPlotOpen Preprocessing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_5_Make_trait_maps.html">
+   Make GeoTiff trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_6_Compare_trait_maps_sPlot_iNat.html">
+   Compare sPlotOpen and iNaturalist trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_9_Observation_density_in_climate_space.html">
+   Density of observations/plots in climate space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_7_Density_vs_Difference.html">
+   Density vs. Difference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_10_Differences_among_biomes.html">
+   Differences among biomes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_11_Growth_Forms_Coverage.html">
+   Growth forms coverage
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Compare sPlotOpen to published trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_14_Closer_Look_at_Schiller_map.html">
+   Comparing iNaturalist to Schiller maps
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Header%20Buffer.html">
+   Alternative approach: Aggregating observations in buffers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_12_Buffers_around_sPlots.html">
+     Buffers around sPlots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_13_Correlation_Buffers.html">
+     Calculate correlation of sPlot CWM and iNaturalist averages
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Chapter_8_Compare to Published Trait Maps.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/sojwolf/iNaturalist_traits"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/sojwolf/iNaturalist_traits/issues/new?title=Issue%20on%20page%20%2FChapter_8_Compare to Published Trait Maps.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sojwolf/iNaturalist_traits/master?urlpath=tree/docs/Chapter_8_Compare to Published Trait Maps.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-published-maps-from-geotiff">
+   Load published maps from GeoTiff
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculate-weighted-r-for-each-published-map-in-relation-to-splotopen">
+   Calculate weighted r for each published map in relation to sPlotOpen
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Compare sPlotOpen to published trait maps</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-published-maps-from-geotiff">
+   Load published maps from GeoTiff
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculate-weighted-r-for-each-published-map-in-relation-to-splotopen">
+   Calculate weighted r for each published map in relation to sPlotOpen
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="compare-splotopen-to-published-trait-maps">
+<h1>Compare sPlotOpen to published trait maps<a class="headerlink" href="#compare-splotopen-to-published-trait-maps" title="Permalink to this headline">¶</a></h1>
+<p>In order to assess the added value of citizen science data for global trait mapping, we compared the trait products generated in this study with trait products from previous studies obtained via extrapolations (see manuscript for references and details).</p>
+<p><strong>Traits</strong>: Leaf N/mass, Leaf N/area, SLA</p>
+<p>This section covers:</p>
+<ul class="simple">
+<li><p>Load GeoTiff published maps</p></li>
+<li><p>Calculate weighted r</p></li>
+<li><p>Comparison of new iNaturalist maps to Schiller maps</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># packages</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># plotting</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># for calculating grid areas</span>
+<span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Proj</span> <span class="c1"># allows for different projections </span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">shape</span> <span class="c1"># for calculating areas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="load-published-maps-from-geotiff">
+<h2>Load published maps from GeoTiff<a class="headerlink" href="#load-published-maps-from-geotiff" title="Permalink to this headline">¶</a></h2>
+<p>We use xarray to load the geotiffs containing the published maps:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">isfile</span><span class="p">,</span> <span class="n">join</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;published_maps/05deg/&quot;</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">if</span> <span class="n">isfile</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">f</span><span class="p">))]</span>
+<span class="n">files</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;other_nit_05deg.tif&#39;, &#39;other_nita_05deg.tif&#39;, &#39;other_sla_05deg.tif&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cubeFile</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.tif&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">sr</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="n">file</span><span class="p">,</span><span class="n">engine</span> <span class="o">=</span> <span class="s2">&quot;rasterio&quot;</span><span class="p">,</span><span class="n">chunks</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">)</span>
+    <span class="n">sr</span> <span class="o">=</span> <span class="n">sr</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s2">&quot;variable&quot;</span><span class="p">:</span><span class="n">name</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">sr</span>
+
+<span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">cubeFile</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">files</span><span class="p">],</span><span class="n">dim</span> <span class="o">=</span> <span class="s2">&quot;variable&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">da</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:      (band: 6, x: 720, y: 360, variable: 3)
+Coordinates:
+  * band         (band) int64 1 2 3 4 5 6
+  * x            (x) float64 -179.8 -179.2 -178.8 -178.2 ... 178.8 179.2 179.8
+  * y            (y) float64 89.75 89.25 88.75 88.25 ... -88.75 -89.25 -89.75
+    spatial_ref  int64 0
+  * variable     (variable) &lt;U16 &#x27;other_nit_05deg&#x27; ... &#x27;other_sla_05deg&#x27;
+Data variables:
+    band_data    (variable, band, y, x) float32 dask.array&lt;chunksize=(1, 6, 360, 720), meta=np.ndarray&gt;</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-f80384f3-4cdf-416a-aa50-2641e50d24d6' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-f80384f3-4cdf-416a-aa50-2641e50d24d6' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>band</span>: 6</li><li><span class='xr-has-index'>x</span>: 720</li><li><span class='xr-has-index'>y</span>: 360</li><li><span class='xr-has-index'>variable</span>: 3</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-1637be80-9297-4389-8bbc-c03acf1c6e47' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1637be80-9297-4389-8bbc-c03acf1c6e47' class='xr-section-summary' >Coordinates: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>band</span></div><div class='xr-var-dims'>(band)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1 2 3 4 5 6</div><input id='attrs-88e84909-dce0-45c2-89d1-62fbee57bb5d' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-88e84909-dce0-45c2-89d1-62fbee57bb5d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-099df569-7dd8-4c27-a973-f2b72ebdd12d' class='xr-var-data-in' type='checkbox'><label for='data-099df569-7dd8-4c27-a973-f2b72ebdd12d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1, 2, 3, 4, 5, 6])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-179.8 -179.2 ... 179.2 179.8</div><input id='attrs-da4452c6-1c17-4884-8cb6-b18c09f75be1' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-da4452c6-1c17-4884-8cb6-b18c09f75be1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6911a297-c502-46cf-bcf9-00f03927783f' class='xr-var-data-in' type='checkbox'><label for='data-6911a297-c502-46cf-bcf9-00f03927783f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-179.75, -179.25, -178.75, ...,  178.75,  179.25,  179.75])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>89.75 89.25 88.75 ... -89.25 -89.75</div><input id='attrs-fd9759a3-1b7a-4e70-a75a-fdb08ec7451d' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-fd9759a3-1b7a-4e70-a75a-fdb08ec7451d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-981c7b16-dd77-45f5-ae91-aaff6e1d0015' class='xr-var-data-in' type='checkbox'><label for='data-981c7b16-dd77-45f5-ae91-aaff6e1d0015' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([ 89.75,  89.25,  88.75, ..., -88.75, -89.25, -89.75])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>spatial_ref</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0</div><input id='attrs-a8040151-1a87-40ac-bf35-efc8134ab507' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a8040151-1a87-40ac-bf35-efc8134ab507' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-89066da5-3882-40e0-95e3-200eb1e415d3' class='xr-var-data-in' type='checkbox'><label for='data-89066da5-3882-40e0-95e3-200eb1e415d3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>crs_wkt :</span></dt><dd>GEOGCS[&quot;WGS 84&quot;,DATUM[&quot;WGS_1984&quot;,SPHEROID[&quot;WGS 84&quot;,6378137,298.257223563,AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]],PRIMEM[&quot;Greenwich&quot;,0],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AXIS[&quot;Latitude&quot;,NORTH],AXIS[&quot;Longitude&quot;,EAST],AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</dd><dt><span>semi_major_axis :</span></dt><dd>6378137.0</dd><dt><span>semi_minor_axis :</span></dt><dd>6356752.314245179</dd><dt><span>inverse_flattening :</span></dt><dd>298.257223563</dd><dt><span>reference_ellipsoid_name :</span></dt><dd>WGS 84</dd><dt><span>longitude_of_prime_meridian :</span></dt><dd>0.0</dd><dt><span>prime_meridian_name :</span></dt><dd>Greenwich</dd><dt><span>geographic_crs_name :</span></dt><dd>WGS 84</dd><dt><span>grid_mapping_name :</span></dt><dd>latitude_longitude</dd><dt><span>spatial_ref :</span></dt><dd>GEOGCS[&quot;WGS 84&quot;,DATUM[&quot;WGS_1984&quot;,SPHEROID[&quot;WGS 84&quot;,6378137,298.257223563,AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]],PRIMEM[&quot;Greenwich&quot;,0],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AXIS[&quot;Latitude&quot;,NORTH],AXIS[&quot;Longitude&quot;,EAST],AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</dd><dt><span>GeoTransform :</span></dt><dd>-180.0 0.5 0.0 90.0 0.0 -0.5</dd></dl></div><div class='xr-var-data'><pre>array(0)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>variable</span></div><div class='xr-var-dims'>(variable)</div><div class='xr-var-dtype'>&lt;U16</div><div class='xr-var-preview xr-preview'>&#x27;other_nit_05deg&#x27; ... &#x27;other_sla...</div><input id='attrs-98922bbe-9e16-452c-b01c-1f98a6db51f8' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-98922bbe-9e16-452c-b01c-1f98a6db51f8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-76de2c70-4722-4612-b527-4e5ff082b9f6' class='xr-var-data-in' type='checkbox'><label for='data-76de2c70-4722-4612-b527-4e5ff082b9f6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;other_nit_05deg&#x27;, &#x27;other_nita_05deg&#x27;, &#x27;other_sla_05deg&#x27;], dtype=&#x27;&lt;U16&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-95d9234b-560c-4195-b08e-d68e8a02cf34' class='xr-section-summary-in' type='checkbox'  checked><label for='section-95d9234b-560c-4195-b08e-d68e8a02cf34' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>band_data</span></div><div class='xr-var-dims'>(variable, band, y, x)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(1, 6, 360, 720), meta=np.ndarray&gt;</div><input id='attrs-84e05cd7-0837-4f2e-9e9e-21233f0c9b84' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-84e05cd7-0837-4f2e-9e9e-21233f0c9b84' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b5fd79a0-12a8-4c3a-ab30-7a8065568e97' class='xr-var-data-in' type='checkbox'><label for='data-b5fd79a0-12a8-4c3a-ab30-7a8065568e97' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>STATISTICS_MAXIMUM :</span></dt><dd>27.708353042603</dd><dt><span>STATISTICS_MEAN :</span></dt><dd>18.29699844944</dd><dt><span>STATISTICS_MINIMUM :</span></dt><dd>9.8121452331543</dd><dt><span>STATISTICS_STDDEV :</span></dt><dd>2.5209980078003</dd></dl></div><div class='xr-var-data'><table>
+    <tr>
+        <td>
+            <table>
+                <thead>
+                    <tr>
+                        <td> </td>
+                        <th> Array </th>
+                        <th> Chunk </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <th> Bytes </th>
+                        <td> 17.80 MiB </td>
+                        <td> 5.93 MiB </td>
+                    </tr>
+
+                    <tr>
+                        <th> Shape </th>
+                        <td> (3, 6, 360, 720) </td>
+                        <td> (1, 6, 360, 720) </td>
+                    </tr>
+                    <tr>
+                        <th> Count </th>
+                        <td> 25 Tasks </td>
+                        <td> 3 Chunks </td>
+                    </tr>
+                    <tr>
+                    <th> Type </th>
+                    <td> float32 </td>
+                    <td> numpy.ndarray </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td>
+        <svg width="374" height="124" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="0" y1="0" x2="25" y2="0" style="stroke-width:2" />
+  <line x1="0" y1="25" x2="25" y2="25" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="0" y1="0" x2="0" y2="25" style="stroke-width:2" />
+  <line x1="8" y1="0" x2="8" y2="25" />
+  <line x1="16" y1="0" x2="16" y2="25" />
+  <line x1="25" y1="0" x2="25" y2="25" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="0.0,0.0 25.412616514582485,0.0 25.412616514582485,25.412616514582485 0.0,25.412616514582485" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="12.706308" y="45.412617" font-size="1.0rem" font-weight="100" text-anchor="middle" >3</text>
+  <text x="45.412617" y="12.706308" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,45.412617,12.706308)">1</text>
+
+
+  <!-- Horizontal lines -->
+  <line x1="95" y1="0" x2="109" y2="14" style="stroke-width:2" />
+  <line x1="95" y1="60" x2="109" y2="74" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="95" y1="0" x2="95" y2="60" style="stroke-width:2" />
+  <line x1="109" y1="14" x2="109" y2="74" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="95.0,0.0 109.9485979497544,14.948597949754403 109.9485979497544,74.9485979497544 95.0,60.0" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="95" y1="0" x2="215" y2="0" style="stroke-width:2" />
+  <line x1="109" y1="14" x2="229" y2="14" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="95" y1="0" x2="109" y2="14" style="stroke-width:2" />
+  <line x1="215" y1="0" x2="229" y2="14" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="95.0,0.0 215.0,0.0 229.9485979497544,14.948597949754403 109.9485979497544,14.948597949754403" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="109" y1="14" x2="229" y2="14" style="stroke-width:2" />
+  <line x1="109" y1="74" x2="229" y2="74" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="109" y1="14" x2="109" y2="74" style="stroke-width:2" />
+  <line x1="229" y1="14" x2="229" y2="74" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="109.9485979497544,14.948597949754403 229.9485979497544,14.948597949754403 229.9485979497544,74.9485979497544 109.9485979497544,74.9485979497544" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="169.948598" y="94.948598" font-size="1.0rem" font-weight="100" text-anchor="middle" >720</text>
+  <text x="249.948598" y="44.948598" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,249.948598,44.948598)">360</text>
+  <text x="92.474299" y="87.474299" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,92.474299,87.474299)">6</text>
+</svg>
+        </td>
+    </tr>
+</table></div></li></ul></div></li><li class='xr-section-item'><input id='section-98092bd7-643a-41cd-94d2-8632db97b789' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-98092bd7-643a-41cd-94d2-8632db97b789' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</div>
+<p>Check output by visualizing one band:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">da</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">band</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">band_data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;other_nit_05deg&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f099bd204c0&gt;
+</pre></div>
+</div>
+<img alt="_images/Chapter_8_Compare to Published Trait Maps_11_1.png" src="_images/Chapter_8_Compare to Published Trait Maps_11_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="calculate-weighted-r-for-each-published-map-in-relation-to-splotopen">
+<h2>Calculate weighted r for each published map in relation to sPlotOpen<a class="headerlink" href="#calculate-weighted-r-for-each-published-map-in-relation-to-splotopen" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lat_weights</span><span class="p">(</span><span class="n">lat_unique</span><span class="p">,</span> <span class="n">deg</span><span class="p">):</span>
+    
+    <span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Proj</span>
+    <span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">shape</span>
+    
+    <span class="c1"># determine weights per grid cell based on longitude</span>
+    <span class="c1"># keep only one exemplary cell at each distance from equator</span>
+    <span class="c1"># weights per approximated area of grid size depending on distance from equator</span>
+    
+    <span class="c1"># make dictionary</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">lat_unique</span><span class="p">:</span>
+        
+        <span class="c1"># the four corner points of the grid cell</span>
+        <span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span> <span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="p">(</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="n">deg</span> <span class="p">,</span> <span class="n">j</span><span class="o">+</span><span class="p">(</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">p3</span> <span class="o">=</span> <span class="p">(</span><span class="n">deg</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="p">(</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+        <span class="n">p4</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="p">(</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+        
+    
+        <span class="c1"># Calculate polygon surface area</span>
+        <span class="c1"># https://stackoverflow.com/questions/4681737/how-to-calculate-the-area-of-a-polygon-on-the-earths-surface-using-python</span>
+        
+        <span class="n">co</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span> <span class="s2">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="n">p1</span><span class="p">,</span><span class="n">p2</span><span class="p">,</span><span class="n">p3</span><span class="p">,</span><span class="n">p4</span><span class="p">]]}</span>
+        <span class="n">lat_1</span><span class="o">=</span><span class="n">p3</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">lat_2</span><span class="o">=</span><span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">lat_0</span><span class="o">=</span><span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">p3</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">lon_0</span><span class="o">=</span><span class="n">deg</span><span class="o">/</span><span class="mi">2</span>
+        
+        
+        <span class="c1"># Projection equal area used: https://proj.org/operations/projections/aea.html</span>
+        <span class="n">projection_string</span><span class="o">=</span><span class="s2">&quot;+proj=aea +lat_1=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lat_1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; +lat_2=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lat_2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; +lat_0=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lat_0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; +lon_0=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">lon_0</span><span class="p">)</span> 
+        <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">co</span><span class="p">[</span><span class="s1">&#39;coordinates&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        
+        <span class="n">pa</span> <span class="o">=</span> <span class="n">Proj</span><span class="p">(</span><span class="n">projection_string</span><span class="p">)</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">pa</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
+        <span class="n">cop</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span> <span class="s2">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)]}</span>
+        
+        <span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">cop</span><span class="p">)</span><span class="o">.</span><span class="n">area</span><span class="o">/</span><span class="mi">1000000</span><span class="p">)</span>
+
+        <span class="c1"># set coord to center of grid cell</span>
+        <span class="n">coord</span> <span class="o">=</span> <span class="n">j</span>
+
+        <span class="n">weights</span><span class="p">[</span><span class="n">coord</span><span class="p">]</span> <span class="o">=</span> <span class="n">area</span>
+    
+    <span class="c1"># turn area into proportion with area/max.area:</span>
+    
+    <span class="n">max_area</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">weights</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        
+        <span class="n">weights</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">/</span><span class="n">max_area</span>
+        
+    <span class="k">return</span> <span class="n">weights</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">weighted_r</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col_1</span><span class="p">,</span> <span class="n">col_2</span><span class="p">,</span> <span class="n">col_lat</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">r2</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    
+    <span class="c1"># map weights to dataframe</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Weights&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col_lat</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+        
+    <span class="c1"># calculate weighted correlation </span>
+    <span class="c1"># https://www.statsmodels.org/stable/generated/statsmodels.stats.weightstats.DescrStatsW.html</span>
+    <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">statmod</span>
+    
+    <span class="n">d1</span> <span class="o">=</span> <span class="n">statmod</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">DescrStatsW</span><span class="p">(</span> <span class="n">df</span><span class="p">[[</span><span class="n">col_1</span><span class="p">,</span> <span class="n">col_2</span><span class="p">]],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Weights&#39;</span><span class="p">]</span> <span class="p">)</span>
+        
+    <span class="n">corr</span> <span class="o">=</span> <span class="n">d1</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="c1"># optional</span>
+    <span class="c1"># calculate r2</span>
+    <span class="k">if</span> <span class="n">r2</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">corr</span> <span class="o">=</span> <span class="n">corr</span><span class="o">**</span><span class="mi">2</span>
+    
+    <span class="k">return</span> <span class="n">corr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calculate weighted r for Leaf N per mass, per area, and for specific leaf area (SLA)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">other_trait</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;other_nit_05deg&#39;</span><span class="p">,</span> <span class="s1">&#39;other_nita_05deg&#39;</span><span class="p">,</span> <span class="s1">&#39;other_sla_05deg&#39;</span><span class="p">]</span>
+<span class="n">trait</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Leaf N per mass&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf N per area&#39;</span><span class="p">,</span> <span class="s1">&#39;SLA&#39;</span><span class="p">]</span>
+
+<span class="n">r_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">trait</span><span class="p">)</span>
+
+<span class="n">deg</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]:</span>
+    
+    <span class="n">r_grid</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
+        
+        <span class="c1"># open sPlotData</span>
+
+        <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;grid_means_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">deg</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;_deg.csv&quot;</span>
+        <span class="n">raster_means</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">raster_means</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="o">~</span><span class="n">raster_means</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">])</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+        
+        <span class="c1"># subset only one trait</span>
+        <span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means</span><span class="p">[</span><span class="n">raster_means</span><span class="p">[</span><span class="s1">&#39;Trait&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">trait</span><span class="p">[</span><span class="n">t</span><span class="p">]]</span>
+        
+        <span class="n">lat_unique</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">lat_weights</span><span class="p">(</span><span class="n">lat_unique</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="n">deg</span><span class="p">)</span>
+         
+        
+        <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># iNaturalist Data</span>
+            <span class="c1"># drop nan&#39;s</span>
+            <span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+            
+            <span class="c1"># calculate weighted r</span>
+            <span class="n">r_trait</span> <span class="o">=</span> <span class="n">weighted_r</span><span class="p">(</span><span class="n">raster_means_trait</span><span class="p">,</span> <span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">,</span> <span class="s2">&quot;y_bin&quot;</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+
+            <span class="n">r_grid</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_trait</span><span class="p">)</span>
+            
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># published data</span>
+        
+            <span class="n">df</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">band</span> <span class="o">=</span> <span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">band_data</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">variable</span> <span class="o">=</span> <span class="n">other_trait</span><span class="p">[</span><span class="n">t</span><span class="p">])</span><span class="o">.</span><span class="n">to_dataset</span><span class="p">()</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+            
+            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">trait</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
+        
+            <span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">raster_means_trait</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Trait&quot;</span><span class="p">,</span><span class="s2">&quot;x_bin&quot;</span><span class="p">,</span> <span class="s2">&quot;y_bin&quot;</span><span class="p">],</span> <span class="n">right_on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">])</span>
+            <span class="n">raster_means_trait</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;spatial_ref&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">,</span> <span class="s2">&quot;band&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            
+            <span class="c1"># log band_data</span>
+            <span class="n">raster_means_trait</span><span class="p">[</span><span class="s1">&#39;band_data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">raster_means_trait</span><span class="p">[</span><span class="s1">&#39;band_data&#39;</span><span class="p">])</span> 
+            
+            <span class="c1"># drop nan&#39;s</span>
+            <span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+            <span class="n">raster_means_trait</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="o">~</span><span class="n">raster_means_trait</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">])</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+            
+            <span class="k">if</span> <span class="n">raster_means_trait</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+                
+                <span class="n">r_trait</span> <span class="o">=</span> <span class="s1">&#39;NaN&#39;</span>
+                <span class="n">r_grid</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_trait</span><span class="p">)</span>
+            
+            <span class="k">else</span><span class="p">:</span>
+            
+                <span class="c1"># calculate weighted r</span>
+                <span class="n">r_trait</span> <span class="o">=</span> <span class="n">weighted_r</span><span class="p">(</span><span class="n">raster_means_trait</span><span class="p">,</span> <span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">,</span> <span class="s2">&quot;band_data&quot;</span><span class="p">,</span> <span class="s2">&quot;y_bin&quot;</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+
+            
+                <span class="c1"># add to trait r&#39;s</span>
+                <span class="n">r_grid</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_trait</span><span class="p">)</span>
+    
+        
+    <span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">r_grid</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">r_all</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+    
+    <span class="c1"># add new series of r at a certain resolution to df </span>
+    <span class="n">r_all</span> <span class="o">=</span> <span class="n">r_all</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+<p>Order of data sets in df:</p>
+<ul class="simple">
+<li><p>Leaf N per mass / Leaf N per area:
+0. iNaturalis</p>
+<ol class="simple">
+<li><p>Butler</p></li>
+<li><p>Boonman</p></li>
+<li><p>Moreno</p></li>
+<li><p>Schiller</p></li>
+<li><p>Vallicrosa</p></li>
+</ol>
+</li>
+<li><p>SLA:
+0. iNaturalist</p>
+<ol class="simple">
+<li><p>Bodegom</p></li>
+<li><p>Butler</p></li>
+<li><p>Boonman</p></li>
+<li><p>Madani</p></li>
+<li><p>Moreno</p></li>
+<li><p>Schiller</p></li>
+</ol>
+</li>
+</ul>
+<p>We exclude the Schiller maps in our interpretation, since they are not extrapolated.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># correlations (r)</span>
+<span class="n">r_all</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Leaf N per mass</th>
+      <th>Leaf N per area</th>
+      <th>SLA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.369761</td>
+      <td>0.533832</td>
+      <td>0.511926</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.240489</td>
+      <td>0.413235</td>
+      <td>0.366148</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.084643</td>
+      <td>0.451688</td>
+      <td>0.309404</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.253438</td>
+      <td>0.461684</td>
+      <td>0.481250</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.402281</td>
+      <td>0.547655</td>
+      <td>-0.023888</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0.235077</td>
+      <td>-0.061551</td>
+      <td>0.396958</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.537115</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Chapter_11_Growth_Forms_Coverage.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Growth forms coverage</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Chapter_14_Closer_Look_at_Schiller_map.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Comparing iNaturalist to Schiller maps</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sophie Wolf et al.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
