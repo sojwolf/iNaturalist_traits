@@ -1,0 +1,8 @@
+jupyter-book
+matplotlib
+numpy
+Pandas
+geopandas
+xarray
+cartopy
+seaborn

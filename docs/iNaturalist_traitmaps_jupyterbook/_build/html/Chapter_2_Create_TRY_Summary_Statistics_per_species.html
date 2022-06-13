@@ -1,0 +1,1333 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create TRY summary statistics per species &#8212; Citizen science plant observations encode global trait patterns</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Link iNaturalist observations to TRY" href="Chapter_3_Link_iNaturalist_observations_to_TRY.html" />
+    <link rel="prev" title="Preprocessing iNaturalist data" href="Chapter_1_Preprocessing_iNaturalist_data.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Citizen science plant observations encode global trait patterns</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Header%20Preprocessing.html">
+   Preprocessing
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_1_Preprocessing_iNaturalist_data.html">
+     Preprocessing iNaturalist data
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Create TRY summary statistics per species
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_3_Link_iNaturalist_observations_to_TRY.html">
+     Link iNaturalist observations to TRY
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_4_sPlotOpen_Preprocessing.html">
+     sPlotOpen Preprocessing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_5_Make_trait_maps.html">
+   Make GeoTiff trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_6_Compare_trait_maps_sPlot_iNat.html">
+   Compare sPlotOpen and iNaturalist trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_9_Observation_density_in_climate_space.html">
+   Density of observations/plots in climate space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_7_Density_vs_Difference.html">
+   Density vs. Difference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_10_Differences_among_biomes.html">
+   Differences among biomes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_11_Growth_Forms_Coverage.html">
+   Growth forms coverage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_8_Compare%20to%20Published%20Trait%20Maps.html">
+   Compare sPlotOpen to published trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_14_Closer_Look_at_Schiller_map.html">
+   Comparing iNaturalist to Schiller maps
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Header%20Buffer.html">
+   Alternative approach: Aggregating observations in buffers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_12_Buffers_around_sPlots.html">
+     Buffers around sPlots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_13_Correlation_Buffers.html">
+     Calculate correlation of sPlot CWM and iNaturalist averages
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Chapter_2_Create_TRY_Summary_Statistics_per_species.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/sojwolf/iNaturalist_traits"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/sojwolf/iNaturalist_traits/issues/new?title=Issue%20on%20page%20%2FChapter_2_Create_TRY_Summary_Statistics_per_species.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sojwolf/iNaturalist_traits/master?urlpath=tree/docs/Chapter_2_Create_TRY_Summary_Statistics_per_species.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#packages">
+   Packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-try-data">
+   Download TRY Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-try-data">
+   Load TRY data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fuzzy-aggregation-of-species-names">
+   Fuzzy Aggregation of species names
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-trait-measurement-per-species">
+   Mean trait measurement per species
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-summary-stats-with-consolidated-species-name">
+     Create summary stats with consolidated species name
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-summary-stats-with-original-name">
+     Create summary stats with original name
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Create TRY summary statistics per species</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#packages">
+   Packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-try-data">
+   Download TRY Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-try-data">
+   Load TRY data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fuzzy-aggregation-of-species-names">
+   Fuzzy Aggregation of species names
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-trait-measurement-per-species">
+   Mean trait measurement per species
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-summary-stats-with-consolidated-species-name">
+     Create summary stats with consolidated species name
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-summary-stats-with-original-name">
+     Create summary stats with original name
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="create-try-summary-statistics-per-species">
+<h1>Create TRY summary statistics per species<a class="headerlink" href="#create-try-summary-statistics-per-species" title="Permalink to this headline">¶</a></h1>
+<p>In this section we download and preprocess the TRY trait data. The TRY database contains trait measurements from individual plants and, typically, multiple individual measurements per trait and species. We want an mean (and stadard deviation) for each trait value per species.</p>
+<p>This section covers:</p>
+<ul class="simple">
+<li><p>Download TRY Data</p></li>
+<li><p>Load data</p></li>
+<li><p>Fuzzy Aggregation of species names</p></li>
+<li><p>Mean trait measurement per species</p></li>
+</ul>
+<div class="section" id="packages">
+<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># dataframes</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  
+<span class="kn">import</span> <span class="nn">os</span> <span class="c1"># system interface</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># plotting</span>
+
+<span class="c1"># fuzzy matching</span>
+<span class="c1">#import rapidfuzz</span>
+<span class="kn">from</span> <span class="nn">rapidfuzz</span> <span class="kn">import</span> <span class="n">process</span><span class="p">,</span> <span class="n">fuzz</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="download-try-data">
+<h2>Download TRY Data<a class="headerlink" href="#download-try-data" title="Permalink to this headline">¶</a></h2>
+<p>To download data from the TRY database, create an account at <a class="reference external" href="https://www.try-db.org/de">https://www.try-db.org/de</a>.</p>
+<p>We choose the option of open access data only, but the curators of this database still require you to add a short project description to your download request. You will then be sent a download link via e-mail.</p>
+<p>For this study we will use continuous (con) traits used in the sPlot analysis from Buehlheide et al. 2018:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Trait</p></th>
+<th class="text-align:center head"><p>ID</p></th>
+<th class="text-align:right head"><p>Unit</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Leaf area (in case of compound leaves: leaflet, undefined if petiole is in- or excluded)</p></td>
+<td class="text-align:center"><p>3113</p></td>
+<td class="text-align:right"><p>mm^2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Leaf area per leaf dry mass (specific leaf area, SLA or 1/LMA): undefined if petiole is in- or excluded)</p></td>
+<td class="text-align:center"><p>3117</p></td>
+<td class="text-align:right"><p>m^2/kg</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Stem specific density (SSD) or wood density (stem dry mass per stem fresh volume)</p></td>
+<td class="text-align:center"><p>4</p></td>
+<td class="text-align:right"><p>g/cm^3</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Leaf carbon (C) content per leaf dry mass</p></td>
+<td class="text-align:center"><p>13</p></td>
+<td class="text-align:right"><p>mg/g</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Leaf nitrogen (N) content per leaf dry mass</p></td>
+<td class="text-align:center"><p>14</p></td>
+<td class="text-align:right"><p>mg/g</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Leaf phosphorus (P) content per leaf dry mass</p></td>
+<td class="text-align:center"><p>15</p></td>
+<td class="text-align:right"><p>mg/g</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Plant height vegetative</p></td>
+<td class="text-align:center"><p>3106</p></td>
+<td class="text-align:right"><p>m</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Seed dry mass</p></td>
+<td class="text-align:center"><p>26</p></td>
+<td class="text-align:right"><p>mg</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Seed length</p></td>
+<td class="text-align:center"><p>27</p></td>
+<td class="text-align:right"><p>mm</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Leaf dry mass per leaf fresh mass (leaf dry matter content, LDMC)</p></td>
+<td class="text-align:center"><p>47</p></td>
+<td class="text-align:right"><p>g/g</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Leaf nitrogen (N) content per leaf area</p></td>
+<td class="text-align:center"><p>50</p></td>
+<td class="text-align:right"><p>g/m^2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Leaf nitrogen/phosphorus (N/P) ratio</p></td>
+<td class="text-align:center"><p>56</p></td>
+<td class="text-align:right"><p>g/g</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Leaf nitrogen (N) isotope signature (delta 15N)</p></td>
+<td class="text-align:center"><p>78</p></td>
+<td class="text-align:right"><p>ppm</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Seed number per reproducton unit</p></td>
+<td class="text-align:center"><p>138</p></td>
+<td class="text-align:right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Leaf fresh mass</p></td>
+<td class="text-align:center"><p>163</p></td>
+<td class="text-align:right"><p>g</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Stem conduit density (vessels and tracheids)</p></td>
+<td class="text-align:center"><p>169</p></td>
+<td class="text-align:right"><p>mm-2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Dispersal unit length</p></td>
+<td class="text-align:center"><p>237</p></td>
+<td class="text-align:right"><p>mm</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Wood vessel element length; stem conduit (vessel and tracheids) element length</p></td>
+<td class="text-align:center"><p>282</p></td>
+<td class="text-align:right"><p>μm</p></td>
+</tr>
+</tbody>
+</table>
+<p>When asked which traits you would like to download, type in the following list. This filters TRY data for our traits of interest, listed in the table above.</p>
+<p><code class="docutils literal notranslate"><span class="pre">3113,</span> <span class="pre">3117,</span> <span class="pre">4,</span> <span class="pre">13,</span> <span class="pre">14,</span> <span class="pre">15,</span> <span class="pre">3106,</span> <span class="pre">26,</span> <span class="pre">27,</span> <span class="pre">47,</span> <span class="pre">50,</span> <span class="pre">56,</span> <span class="pre">78,</span> <span class="pre">138,</span> <span class="pre">163,</span> <span class="pre">169,</span> <span class="pre">237,</span> <span class="pre">282</span></code></p>
+</div>
+<div class="section" id="load-try-data">
+<h2>Load TRY data<a class="headerlink" href="#load-try-data" title="Permalink to this headline">¶</a></h2>
+<p>First, load the TRY data as a data frame, selecting only the following columns:</p>
+<ul class="simple">
+<li><p><strong>AccSpeciesName</strong> - Consolidated species name</p></li>
+<li><p><strong>SpeciesName</strong> - Species name</p></li>
+<li><p><strong>TraitID</strong> - Unique identifier for traits (only if the record is a trait)</p></li>
+<li><p><strong>TraitName</strong> - Name of trait (only if the record is a trait)</p></li>
+<li><p><strong>StdValue</strong> - Standardized value: available for standardized traits</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYdata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;TRY/19287.txt&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;iso-8859-1&quot;</span><span class="p">,</span> 
+                      <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AccSpeciesName&quot;</span><span class="p">,</span> <span class="s2">&quot;SpeciesName&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitID&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitName&quot;</span><span class="p">,</span> <span class="s2">&quot;StdValue&quot;</span><span class="p">],</span>
+                     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;TraitID&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/net/home/swolf/.conda/envs/cartopy/lib/python3.8/site-packages/IPython/core/interactiveshell.py:3172: DtypeWarning: Columns (10) have mixed types.Specify dtype option on import or set low_memory=False.
+  has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SpeciesName</th>
+      <th>AccSpeciesName</th>
+      <th>TraitID</th>
+      <th>TraitName</th>
+      <th>StdValue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Acer campestre</td>
+      <td>Acer campestre</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Acer campestre</td>
+      <td>Acer campestre</td>
+      <td>26.0</td>
+      <td>Seed dry mass</td>
+      <td>14.38</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Acer platanoides</td>
+      <td>Acer platanoides</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Acer platanoides</td>
+      <td>Acer platanoides</td>
+      <td>26.0</td>
+      <td>Seed dry mass</td>
+      <td>59.90</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Acer pseudoplatanus</td>
+      <td>Acer pseudoplatanus</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYdata</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each row represents one trait measurements performed on one individual plant. To get an idea of the data, look at the shape of the dataframe. We then remove the observations that do not have measurements for out traits of interest, i.e. the <code class="docutils literal notranslate"><span class="pre">trait</span> <span class="pre">ID</span></code> is <code class="docutils literal notranslate"><span class="pre">NaN</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYdata</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(16015161, 5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYdata</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;TraitID&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check number of unique trait names</span>
+<span class="n">TRYdata</span><span class="p">[</span><span class="s2">&quot;TraitID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># number of unique species</span>
+<span class="n">TRYdata</span><span class="p">[</span><span class="s2">&quot;AccSpeciesName&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>54739
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test histrogramm output for Stem specific density (SSD) as an example:</span>
+
+<span class="n">StdValues</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">TRYdata</span><span class="p">[</span><span class="s2">&quot;TraitID&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;StdValue&quot;</span><span class="p">]]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">StdValues</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">25</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter_2_Create_TRY_Summary_Statistics_per_species_15_0.png" src="_images/Chapter_2_Create_TRY_Summary_Statistics_per_species_15_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="fuzzy-aggregation-of-species-names">
+<h2>Fuzzy Aggregation of species names<a class="headerlink" href="#fuzzy-aggregation-of-species-names" title="Permalink to this headline">¶</a></h2>
+<p>Are there duplicates in the TRY species names?</p>
+<p>We remove author annotation from species names, since the data we want to later merge TRY data with - iNaturalist, observations - only have species names without author annotations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make all letters lower case</span>
+<span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="c1"># capitalize first letter in string</span>
+<span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="c1"># get only two first words (split at space)</span>
+<span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]))</span>
+<span class="c1"># change type to string</span>
+<span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+<span class="c1"># same for species name</span>
+<span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;SpeciesName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;SpeciesName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;SpeciesName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;SpeciesName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;SpeciesName&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;SpeciesName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;SpeciesName&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;SpeciesName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Unique species:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRY_sp</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="p">[</span><span class="s2">&quot;AccSpeciesName&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">TRY_sp</span> <span class="o">=</span> <span class="n">TRY_sp</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">TRY_sp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>51908
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fuzzy_match</span><span class="p">(</span><span class="n">choices</span><span class="p">,</span> <span class="n">queries</span><span class="p">,</span> <span class="n">cutoff</span><span class="p">):</span>
+    
+    <span class="n">score_sort</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,)</span> <span class="o">+</span> <span class="n">i</span>
+             <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">queries</span>
+             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">process</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">choices</span><span class="p">,</span> <span class="n">score_cutoff</span><span class="o">=</span><span class="n">cutoff</span><span class="p">,</span> <span class="n">scorer</span><span class="o">=</span><span class="n">fuzz</span><span class="o">.</span><span class="n">token_sort_ratio</span><span class="p">)</span> <span class="p">]</span>
+    
+    <span class="n">similarity_sort</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">score_sort</span><span class="p">)</span>
+    <span class="n">similarity_sort</span> <span class="o">=</span> <span class="n">similarity_sort</span><span class="p">[</span><span class="n">similarity_sort</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="mf">100.0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">similarity_sort</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRY_matches</span> <span class="o">=</span> <span class="n">fuzzy_match</span><span class="p">(</span><span class="n">TRY_sp</span><span class="p">,</span> <span class="n">TRY_sp</span><span class="p">,</span> <span class="mi">95</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRY_matches</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>86</th>
+      <td>Rosmarinus officinalis</td>
+      <td>Rosmarinus officilis</td>
+      <td>95.238095</td>
+      <td>49470</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Symphoricarpos albus</td>
+      <td>Symphoricarpus albus</td>
+      <td>95.000000</td>
+      <td>45580</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>Chionochloa rigida</td>
+      <td>Chionochloa frigida</td>
+      <td>97.297297</td>
+      <td>10863</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>Andropogon gerardii</td>
+      <td>Andropogon gerardi</td>
+      <td>97.297297</td>
+      <td>9294</td>
+    </tr>
+    <tr>
+      <th>354</th>
+      <td>Tourouli guianensis</td>
+      <td>Touroulia guianensis</td>
+      <td>97.435897</td>
+      <td>25350</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRY_matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>516
+</pre></div>
+</div>
+</div>
+</div>
+<p>Only 0.5% of unique species in TRY have potential duplicates (similar names). We decided to diregard this slight uncertainty and accepted that these species might not be matched to the iNaturalist observations.</p>
+<p>We devide the number for matches by 2, since every pair is listed twice (positions switched).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">TRY_matches</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">TRY_sp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.005124450951683748
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mean-trait-measurement-per-species">
+<h2>Mean trait measurement per species<a class="headerlink" href="#mean-trait-measurement-per-species" title="Permalink to this headline">¶</a></h2>
+<p>Here we create a dataframe with one species per row with a mean trait value and standard deviations for each trait in the following columns.</p>
+<p>Number of unique species:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>51908
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYdata</span><span class="p">[</span><span class="s1">&#39;SpeciesName&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>61181
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-summary-stats-with-consolidated-species-name">
+<h3>Create summary stats with consolidated species name<a class="headerlink" href="#create-summary-stats-with-consolidated-species-name" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">groupby</span></code> function to group data by consolidated species name and trait; grouping variables: <code class="docutils literal notranslate"><span class="pre">AccSpeciesName,</span> <span class="pre">TraitName,</span> <span class="pre">TraitID</span></code>.</p>
+<p>More information: <a class="reference external" href="https://www.tutorialspoint.com/python_pandas/python_pandas_groupby.htm">https://www.tutorialspoint.com/python_pandas/python_pandas_groupby.htm</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># group data by species name and trait</span>
+
+<span class="n">grouped</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">,</span> <span class="s1">&#39;TraitID&#39;</span><span class="p">,</span> <span class="s1">&#39;TraitName&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calculate statistics (mean and standard deviation) using the aggregate function on each group. This returns a data frame with the mean and standard deviation for each species and each trait per row. Reset indeces (species name, trait ID and trait name) as columns in dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYsummary</span> <span class="o">=</span> <span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;StdValue&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1">#check output</span>
+<span class="n">TRYsummary</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>AccSpeciesName</th>
+      <th>TraitID</th>
+      <th>TraitName</th>
+      <th>mean</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Aa</td>
+      <td>14.0</td>
+      <td>Leaf nitrogen (N) content per leaf dry mass</td>
+      <td>26.400000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Aa</td>
+      <td>50.0</td>
+      <td>Leaf nitrogen (N) content per leaf area</td>
+      <td>2.798400</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Aa</td>
+      <td>3117.0</td>
+      <td>Leaf area per leaf dry mass (specific leaf are...</td>
+      <td>9.433962</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Aaronsohnia pubescens</td>
+      <td>3106.0</td>
+      <td>Plant height vegetative</td>
+      <td>0.200000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Abacaba (palm)</td>
+      <td>3106.0</td>
+      <td>Plant height vegetative</td>
+      <td>15.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">shorten_names</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Stem specific density (SSD) or wood density (stem dry mass per stem fresh volume)&#39;</span><span class="p">:</span><span class="s1">&#39;SSD&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Leaf carbon (C) content per leaf dry mass&#39;</span><span class="p">:</span><span class="s1">&#39;Leaf C&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Leaf nitrogen (N) content per leaf dry mass&#39;</span><span class="p">:</span><span class="s1">&#39;Leaf N per mass&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Leaf phosphorus (P) content per leaf dry mass&#39;</span><span class="p">:</span><span class="s1">&#39;Leaf P&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Leaf dry mass per leaf fresh mass (leaf dry matter content, LDMC)&#39;</span><span class="p">:</span><span class="s1">&#39;LDMC&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Seed dry mass&#39;</span><span class="p">:</span><span class="s1">&#39;Seed mass&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Seed length&#39;</span><span class="p">:</span><span class="s1">&#39;Seed length&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Leaf nitrogen (N) content per leaf area&#39;</span><span class="p">:</span><span class="s1">&#39;Leaf N per area&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Leaf nitrogen/phosphorus (N/P) ratio&#39;</span><span class="p">:</span><span class="s1">&#39;Leaf N P ratio&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Leaf nitrogen (N) isotope signature (delta 15N)&#39;</span><span class="p">:</span><span class="s1">&#39;Leaf delta15N&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Leaf fresh mass&#39;</span><span class="p">:</span><span class="s1">&#39;Leaf fresh mass&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Seed number per reproducton unit&#39;</span><span class="p">:</span><span class="s1">&#39;Seeds per rep. unit&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Stem conduit density (vessels and tracheids)&#39;</span><span class="p">:</span><span class="s1">&#39;Stem conduit density&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Dispersal unit length&#39;</span><span class="p">:</span><span class="s1">&#39;Dispersal unit length&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Wood vessel element length; stem conduit (vessel and tracheids) element length&#39;</span><span class="p">:</span><span class="s1">&#39;Conduit element length&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Plant height vegetative&#39;</span><span class="p">:</span><span class="s1">&#39;Plant Height&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Leaf area (in case of compound leaves: leaflet, undefined if petiole is in- or excluded)&#39;</span><span class="p">:</span><span class="s1">&#39;Leaf Area&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Leaf area per leaf dry mass (specific leaf area, SLA or 1/LMA): undefined if petiole is in- or excluded&#39;</span><span class="p">:</span><span class="s1">&#39;SLA&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Change data frame from long to wide using <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame.pivot</span></code>. And shorten trait names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYsummary_t</span> <span class="o">=</span> <span class="n">TRYsummary</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;AccSpeciesName&quot;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;TraitName&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">)</span>
+
+<span class="c1"># reset indeces (species name) as columns in data frame</span>
+<span class="n">TRYsummary_t</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">shorten_names</span><span class="p">(</span><span class="n">TRYsummary_t</span><span class="p">)</span>
+
+<span class="n">TRYsummary_t</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>TraitName</th>
+      <th>AccSpeciesName</th>
+      <th>Dispersal unit length</th>
+      <th>Leaf Area</th>
+      <th>SLA</th>
+      <th>Leaf C</th>
+      <th>LDMC</th>
+      <th>Leaf fresh mass</th>
+      <th>Leaf N per area</th>
+      <th>Leaf N per mass</th>
+      <th>Leaf delta15N</th>
+      <th>Leaf N P ratio</th>
+      <th>Leaf P</th>
+      <th>Plant Height</th>
+      <th>Seed mass</th>
+      <th>Seed length</th>
+      <th>Seeds per rep. unit</th>
+      <th>Stem conduit density</th>
+      <th>SSD</th>
+      <th>Conduit element length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Aa</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>9.433962</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.7984</td>
+      <td>26.4</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Aaronsohnia pubescens</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Abacaba (palm)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>15.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Because some species have a different SpeciesName and AccSpeciesName, we have more rows than unique species. We will keep all for now, so we can match the names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYsummary_t</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(51908, 19)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYsummary_t</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;TRY/TRY_summary_stats.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-summary-stats-with-original-name">
+<h3>Create summary stats with original name<a class="headerlink" href="#create-summary-stats-with-original-name" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># group data by species name and trait, same analysis as above</span>
+<span class="n">grouped_syn</span> <span class="o">=</span> <span class="n">TRYdata</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;SpeciesName&#39;</span><span class="p">,</span> <span class="s1">&#39;TraitID&#39;</span><span class="p">,</span> <span class="s1">&#39;TraitName&#39;</span><span class="p">])</span>
+
+<span class="n">TRYsummary_syn</span> <span class="o">=</span> <span class="n">grouped_syn</span><span class="p">[</span><span class="s1">&#39;StdValue&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># change df shape</span>
+<span class="n">TRYsummary_t_syn</span> <span class="o">=</span> <span class="n">TRYsummary_syn</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;SpeciesName&quot;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;TraitName&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span><span class="p">)</span>
+
+<span class="c1"># reset indeces (species name) as columns in data frame</span>
+<span class="n">TRYsummary_t_syn</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># shorten column names</span>
+<span class="n">shorten_names</span><span class="p">(</span><span class="n">TRYsummary_t_syn</span><span class="p">)</span>
+
+<span class="n">TRYsummary_t_syn</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>TraitName</th>
+      <th>SpeciesName</th>
+      <th>Dispersal unit length</th>
+      <th>Leaf Area</th>
+      <th>SLA</th>
+      <th>Leaf C</th>
+      <th>LDMC</th>
+      <th>Leaf fresh mass</th>
+      <th>Leaf N per area</th>
+      <th>Leaf N per mass</th>
+      <th>Leaf delta15N</th>
+      <th>Leaf N P ratio</th>
+      <th>Leaf P</th>
+      <th>Plant Height</th>
+      <th>Seed mass</th>
+      <th>Seed length</th>
+      <th>Seeds per rep. unit</th>
+      <th>Stem conduit density</th>
+      <th>SSD</th>
+      <th>Conduit element length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>(fabaceae)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>21.3385</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.578157</td>
+      <td>33.150000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>(fabaceae) 20-25oblong</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.761453</td>
+      <td>32.513864</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>(fabaceae) brillafuzzy</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.397197</td>
+      <td>33.837593</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Save this dataframe as <code class="docutils literal notranslate"><span class="pre">csv</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TRYsummary_t_syn</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;TRY/TRY_summary_stats_syn.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Chapter_1_Preprocessing_iNaturalist_data.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Preprocessing iNaturalist data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Chapter_3_Link_iNaturalist_observations_to_TRY.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Link iNaturalist observations to TRY</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sophie Wolf et al.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

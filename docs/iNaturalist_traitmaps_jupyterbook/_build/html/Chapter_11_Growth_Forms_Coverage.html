@@ -1,0 +1,1945 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Growth forms coverage &#8212; Citizen science plant observations encode global trait patterns</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Compare sPlotOpen to published trait maps" href="Chapter_8_Compare%20to%20Published%20Trait%20Maps.html" />
+    <link rel="prev" title="Differences among biomes" href="Chapter_10_Differences_among_biomes.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Citizen science plant observations encode global trait patterns</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Header%20Preprocessing.html">
+   Preprocessing
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_1_Preprocessing_iNaturalist_data.html">
+     Preprocessing iNaturalist data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_2_Create_TRY_Summary_Statistics_per_species.html">
+     Create TRY summary statistics per species
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_3_Link_iNaturalist_observations_to_TRY.html">
+     Link iNaturalist observations to TRY
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_4_sPlotOpen_Preprocessing.html">
+     sPlotOpen Preprocessing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_5_Make_trait_maps.html">
+   Make GeoTiff trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_6_Compare_trait_maps_sPlot_iNat.html">
+   Compare sPlotOpen and iNaturalist trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_9_Observation_density_in_climate_space.html">
+   Density of observations/plots in climate space
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_7_Density_vs_Difference.html">
+   Density vs. Difference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_10_Differences_among_biomes.html">
+   Differences among biomes
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Growth forms coverage
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_8_Compare%20to%20Published%20Trait%20Maps.html">
+   Compare sPlotOpen to published trait maps
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter_14_Closer_Look_at_Schiller_map.html">
+   Comparing iNaturalist to Schiller maps
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Header%20Buffer.html">
+   Alternative approach: Aggregating observations in buffers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_12_Buffers_around_sPlots.html">
+     Buffers around sPlots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter_13_Correlation_Buffers.html">
+     Calculate correlation of sPlot CWM and iNaturalist averages
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Chapter_11_Growth_Forms_Coverage.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/sojwolf/iNaturalist_traits"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/sojwolf/iNaturalist_traits/issues/new?title=Issue%20on%20page%20%2FChapter_11_Growth_Forms_Coverage.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sojwolf/iNaturalist_traits/master?urlpath=tree/docs/Chapter_11_Growth_Forms_Coverage.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Growth forms coverage
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#link-growth-form-information-to-inaturalist-observations">
+     Link growth form information to iNaturalist observations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculate-coverage">
+   Calculate coverage
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-coverage">
+     Plot coverage
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-to-splot-life-form-coverage">
+     Compare to sPlot life form coverage
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#over-biomes">
+       Over biomes
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Growth forms coverage</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Growth forms coverage
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#link-growth-form-information-to-inaturalist-observations">
+     Link growth form information to iNaturalist observations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculate-coverage">
+   Calculate coverage
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-coverage">
+     Plot coverage
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compare-to-splot-life-form-coverage">
+     Compare to sPlot life form coverage
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#over-biomes">
+       Over biomes
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="growth-forms-coverage">
+<h1>Growth forms coverage<a class="headerlink" href="#growth-forms-coverage" title="Permalink to this headline">¶</a></h1>
+<p>We extracted growth form information (tree/shrub/herb) from TRY (Trait-ID 42) to each iNaturalist observation and estimated the coverage of each growth form for all sPlotOpen plots. We chose the most commonly used classification for each species. The average tree/shrub/herb coverage was then calculated for each grid cell and the these means correlated.</p>
+<p>This section covers:</p>
+<ul class="simple">
+<li><p>Link growth form information to iNaturalist observations</p></li>
+<li><p>Calculate coverage</p></li>
+<li><p>Plot coverage</p></li>
+<li><p>Compare to sPlot life form coverage</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># packages</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LogNorm</span><span class="p">,</span> <span class="n">Normalize</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">MaxNLocator</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">BoundaryNorm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="link-growth-form-information-to-inaturalist-observations">
+<h2>Link growth form information to iNaturalist observations<a class="headerlink" href="#link-growth-form-information-to-inaturalist-observations" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iNat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;iNat_TRY_log.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">life_forms</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;TRY/Life_Forms/19233.txt&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;iso-8859-1&quot;</span><span class="p">,</span> 
+                      <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;AccSpeciesName&quot;</span><span class="p">,</span> <span class="s2">&quot;SpeciesName&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitID&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitName&quot;</span><span class="p">,</span> <span class="s2">&quot;OrigValueStr&quot;</span><span class="p">],</span>
+                     <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;TraitID&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/net/home/swolf/.conda/envs/cartopy/lib/python3.8/site-packages/IPython/core/interactiveshell.py:3172: DtypeWarning: Columns (10) have mixed types.Specify dtype option on import or set low_memory=False.
+  has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">growth_forms</span> <span class="o">=</span> <span class="n">life_forms</span><span class="p">[</span><span class="n">life_forms</span><span class="p">[</span><span class="s2">&quot;TraitID&quot;</span><span class="p">]</span><span class="o">==</span><span class="mf">42.0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">growth_forms</span> <span class="o">=</span> <span class="n">growth_forms</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;OrigValueStr&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Define the variations of growth form terms:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">search_terms_tree</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;tree&quot;</span><span class="p">,</span> <span class="s2">&quot;Tree&quot;</span><span class="p">,</span> <span class="s2">&quot;TREE&quot;</span><span class="p">,</span> <span class="s2">&quot;seedling&quot;</span><span class="p">,</span> <span class="s2">&quot;hardwood&quot;</span><span class="p">,</span> <span class="s2">&quot;softwood&quot;</span><span class="p">,</span> <span class="s2">&quot;Hardwood&quot;</span><span class="p">,</span> <span class="s2">&quot;Softwood&quot;</span><span class="p">]</span>
+<span class="n">search_terms_herb</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;herb&quot;</span><span class="p">,</span><span class="s2">&quot;Herb&quot;</span><span class="p">,</span> <span class="s2">&quot;HERB&quot;</span><span class="p">,</span><span class="s2">&quot;graminoid&quot;</span><span class="p">,</span> <span class="s2">&quot;Graminoid&quot;</span><span class="p">,</span><span class="s2">&quot;GRAMINOID&quot;</span><span class="p">,</span> <span class="s2">&quot;Forb&quot;</span><span class="p">,</span><span class="s2">&quot;forb&quot;</span><span class="p">,</span> 
+                     <span class="s2">&quot;Grass&quot;</span><span class="p">,</span><span class="s2">&quot;grass&quot;</span><span class="p">,</span> <span class="s2">&quot;GRASS&quot;</span><span class="p">,</span> <span class="s2">&quot;sedge&quot;</span><span class="p">,</span><span class="s2">&quot;SEDGE&quot;</span><span class="p">,</span> <span class="s2">&quot;fern&quot;</span><span class="p">,</span> <span class="s2">&quot;Fern&quot;</span><span class="p">,</span> <span class="s2">&quot;FERN&quot;</span><span class="p">]</span>
+<span class="n">search_terms_shrub</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;shrub&quot;</span><span class="p">,</span><span class="s2">&quot;Shrub&quot;</span><span class="p">,</span> <span class="s2">&quot;SHRUB&quot;</span><span class="p">,</span> <span class="s2">&quot;seedling&quot;</span><span class="p">,</span><span class="s2">&quot;vine&quot;</span><span class="p">,</span> <span class="s2">&quot;Vine&quot;</span><span class="p">,</span> <span class="s2">&quot;VINE&quot;</span><span class="p">,</span> <span class="s2">&quot;liana&quot;</span><span class="p">,</span> <span class="s2">&quot;Liana&quot;</span><span class="p">,</span> <span class="s2">&quot;LIANA&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Add 1 for <code class="docutils literal notranslate"><span class="pre">is_tree</span></code>, <code class="docutils literal notranslate"><span class="pre">is_shrub</span></code>, and <code class="docutils literal notranslate"><span class="pre">is_herb</span></code>, 0 if not:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;is_tree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">growth_forms</span><span class="p">[</span><span class="s2">&quot;OrigValueStr&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;T&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;OrigValueStr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">search_terms_tree</span><span class="p">))</span>
+
+<span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;is_tree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;is_tree&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;is_shrub&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">growth_forms</span><span class="p">[</span><span class="s2">&quot;OrigValueStr&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;S&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">growth_forms</span><span class="p">[</span><span class="s2">&quot;OrigValueStr&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;L&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;OrigValueStr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">search_terms_shrub</span><span class="p">))</span>
+
+<span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;is_shrub&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;is_shrub&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;is_herb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">growth_forms</span><span class="p">[</span><span class="s2">&quot;OrigValueStr&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;H&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">growth_forms</span><span class="p">[</span><span class="s2">&quot;OrigValueStr&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;F&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">growth_forms</span><span class="p">[</span><span class="s2">&quot;OrigValueStr&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;G&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;OrigValueStr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">search_terms_herb</span><span class="p">))</span>
+
+<span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;is_herb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">growth_forms</span><span class="p">[</span><span class="s1">&#39;is_herb&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">growth_forms</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SpeciesName</th>
+      <th>AccSpeciesName</th>
+      <th>TraitID</th>
+      <th>TraitName</th>
+      <th>OrigValueStr</th>
+      <th>is_tree</th>
+      <th>is_shrub</th>
+      <th>is_herb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Bartsia alpina</td>
+      <td>Bartsia alpina</td>
+      <td>42.0</td>
+      <td>Plant growth form</td>
+      <td>HEMI-PARASITE</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Calamagrostis lapponica</td>
+      <td>Calamagrostis lapponica</td>
+      <td>42.0</td>
+      <td>Plant growth form</td>
+      <td>GRAMINOID</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Carex capitata</td>
+      <td>Carex capitata</td>
+      <td>42.0</td>
+      <td>Plant growth form</td>
+      <td>SEDGE</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Carex rostrata</td>
+      <td>Carex rostrata</td>
+      <td>42.0</td>
+      <td>Plant growth form</td>
+      <td>SEDGE</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Carex saxatilis</td>
+      <td>Carex saxatilis</td>
+      <td>42.0</td>
+      <td>Plant growth form</td>
+      <td>SEDGE</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>21058940</th>
+      <td>Artemisia rothrockii</td>
+      <td>Artemisia rothrockii</td>
+      <td>42.0</td>
+      <td>Plant growth form</td>
+      <td>shrub seedling</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>21058949</th>
+      <td>Artemisia rothrockii</td>
+      <td>Artemisia rothrockii</td>
+      <td>42.0</td>
+      <td>Plant growth form</td>
+      <td>shrub seedling</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>21058958</th>
+      <td>Artemisia rothrockii</td>
+      <td>Artemisia rothrockii</td>
+      <td>42.0</td>
+      <td>Plant growth form</td>
+      <td>shrub seedling</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>21058967</th>
+      <td>Artemisia rothrockii</td>
+      <td>Artemisia rothrockii</td>
+      <td>42.0</td>
+      <td>Plant growth form</td>
+      <td>shrub seedling</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>21058976</th>
+      <td>Artemisia rothrockii</td>
+      <td>Artemisia rothrockii</td>
+      <td>42.0</td>
+      <td>Plant growth form</td>
+      <td>shrub seedling</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1737341 rows × 8 columns</p>
+</div></div></div>
+</div>
+<p>Sum the growth form attribution for each species:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">growth_forms_sum</span> <span class="o">=</span> <span class="n">growth_forms</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">growth_forms_sum</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">growth_forms_sum</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>AccSpeciesName</th>
+      <th>TraitID</th>
+      <th>is_tree</th>
+      <th>is_shrub</th>
+      <th>is_herb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ACAENA NOVAE-ZELANDIAE</td>
+      <td>462.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ADIANTUM CAPILLUS-VENERIS</td>
+      <td>1974.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALISMA PLANTAGO-AQUATICA</td>
+      <td>18942.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>299</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>APERA SPICA-VENTI</td>
+      <td>10248.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>241</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ARCTOSTAPHYLOS UVA-URSI</td>
+      <td>9534.0</td>
+      <td>0</td>
+      <td>160</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Merge with iNaturalsit observations:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">growth_forms_sum</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;AccSpeciesName&#39;</span><span class="p">:</span><span class="s1">&#39;scientificName&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="n">iNat_lf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">iNat</span><span class="p">,</span> <span class="n">growth_forms_sum</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;scientificName&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[[</span><span class="s2">&quot;is_tree&quot;</span><span class="p">,</span> <span class="s2">&quot;is_shrub&quot;</span><span class="p">,</span> <span class="s2">&quot;is_herb&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;columns&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iNat_lf</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s2">&quot;life form&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="calculate-coverage">
+<h1>Calculate coverage<a class="headerlink" href="#calculate-coverage" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">})</span>
+
+<span class="n">step</span> <span class="o">=</span> <span class="mi">181</span>
+
+<span class="n">bins_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="n">step</span><span class="p">)</span> 
+<span class="n">bins_y</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="nb">int</span><span class="p">(((</span><span class="n">step</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;decimalLongitude&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins_x</span><span class="p">)</span>
+<span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;decimalLatitude&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins_y</span><span class="p">)</span>
+<span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+<span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iNat_tree</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">==</span> <span class="s2">&quot;is_tree&quot;</span><span class="p">]</span>
+<span class="n">iNat_shrub</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">==</span> <span class="s2">&quot;is_shrub&quot;</span><span class="p">]</span>
+<span class="n">iNat_herb</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">==</span> <span class="s2">&quot;is_herb&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>First get number of observations per grid cell:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped_all</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped_all</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x_bin</th>
+      <th>y_bin</th>
+      <th>size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-180.0</td>
+      <td>-90.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-180.0</td>
+      <td>-88.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-180.0</td>
+      <td>-86.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-180.0</td>
+      <td>-84.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-180.0</td>
+      <td>-82.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>16195</th>
+      <td>178.0</td>
+      <td>80.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16196</th>
+      <td>178.0</td>
+      <td>82.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16197</th>
+      <td>178.0</td>
+      <td>84.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16198</th>
+      <td>178.0</td>
+      <td>86.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16199</th>
+      <td>178.0</td>
+      <td>88.0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>16200 rows × 3 columns</p>
+</div></div></div>
+</div>
+<p>Then calcualte number of <code class="docutils literal notranslate"><span class="pre">is_tree</span></code>, <code class="docutils literal notranslate"><span class="pre">is_shrub</span></code>, and <code class="docutils literal notranslate"><span class="pre">is_herb</span></code> in each grid cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped_trees</span> <span class="o">=</span> <span class="n">iNat_tree</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="n">grouped_shrubs</span> <span class="o">=</span> <span class="n">iNat_shrub</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="n">grouped_herbs</span> <span class="o">=</span> <span class="n">iNat_herb</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;cover_tree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped_trees</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span>
+<span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;cover_shrub&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped_shrubs</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span>
+<span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;cover_herb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped_herbs</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grouped_all</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x_bin</th>
+      <th>y_bin</th>
+      <th>size</th>
+      <th>cover_tree</th>
+      <th>cover_shrub</th>
+      <th>cover_herb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-180.0</td>
+      <td>-90.0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-180.0</td>
+      <td>-88.0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-180.0</td>
+      <td>-86.0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-180.0</td>
+      <td>-84.0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-180.0</td>
+      <td>-82.0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>16195</th>
+      <td>178.0</td>
+      <td>80.0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16196</th>
+      <td>178.0</td>
+      <td>82.0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16197</th>
+      <td>178.0</td>
+      <td>84.0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16198</th>
+      <td>178.0</td>
+      <td>86.0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16199</th>
+      <td>178.0</td>
+      <td>88.0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>16200 rows × 6 columns</p>
+</div></div></div>
+</div>
+<div class="section" id="plot-coverage">
+<h2>Plot coverage<a class="headerlink" href="#plot-coverage" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">lf</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;cover_tree&#39;</span><span class="p">,</span> <span class="s1">&#39;cover_shrub&#39;</span><span class="p">,</span> <span class="s1">&#39;cover_herb&#39;</span><span class="p">]:</span>
+    <span class="n">data_iNat_TRY</span> <span class="o">=</span> <span class="n">grouped_all</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s1">&#39;y_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="n">lf</span><span class="p">)</span>
+<span class="c1"># data format</span>
+    <span class="n">data_crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+    
+    <span class="c1">#for colorbar</span>
+    <span class="n">levels_iNat</span> <span class="o">=</span> <span class="n">MaxNLocator</span><span class="p">(</span><span class="n">nbins</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">tick_values</span><span class="p">(</span><span class="n">grouped_all</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">grouped_all</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;gist_yarg&#39;</span><span class="p">)</span>
+    <span class="n">norm</span> <span class="o">=</span> <span class="n">BoundaryNorm</span><span class="p">(</span><span class="n">levels_iNat</span><span class="p">,</span> <span class="n">ncolors</span><span class="o">=</span><span class="n">cmap</span><span class="o">.</span><span class="n">N</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">im_ratio</span> <span class="o">=</span> <span class="n">data_iNat_TRY</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">data_iNat_TRY</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1">#plot map</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span> <span class="c1"># I created a new figure and set up its size</span>
+
+    <span class="c1">#create base plot of a world map</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">())</span> <span class="c1"># I used the PlateCarree projection from cartopy</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_global</span><span class="p">()</span>
+    
+    <span class="c1">#add grid with values</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">bins_x</span><span class="p">,</span> <span class="n">bins_y</span><span class="p">,</span> <span class="n">data_iNat_TRY</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gist_yarg&quot;</span><span class="p">,</span> 
+                   <span class="n">vmin</span><span class="o">=</span><span class="n">grouped_all</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+                  <span class="n">vmax</span><span class="o">=</span><span class="n">grouped_all</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+                      <span class="n">transform</span><span class="o">=</span><span class="n">data_crs</span><span class="p">)</span> 
+    
+    <span class="c1">#add color bar</span>
+    <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;percent observation&#39;</span> <span class="o">+</span> <span class="n">lf</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span><span class="n">fraction</span><span class="o">=</span><span class="mf">0.046</span><span class="o">*</span><span class="n">im_ratio</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.04</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span> <span class="p">)</span>
+
+    <span class="c1">#add coastlines</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;110m&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+
+    <span class="c1">#set title</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span> <span class="s2">&quot;iNaturalist &quot;</span> <span class="o">+</span> <span class="n">lf</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+    
+    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;../Figures/iNat_&#39;</span> <span class="o">+</span> <span class="n">lf</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;_cover.pdf&#39;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>  
+
+   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_32_0.png" src="_images/Chapter_11_Growth_Forms_Coverage_32_0.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_32_1.png" src="_images/Chapter_11_Growth_Forms_Coverage_32_1.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_32_2.png" src="_images/Chapter_11_Growth_Forms_Coverage_32_2.png" />
+</div>
+</div>
+</div>
+<div class="section" id="compare-to-splot-life-form-coverage">
+<h2>Compare to sPlot life form coverage<a class="headerlink" href="#compare-to-splot-life-form-coverage" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sPlot_cover</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;sPlotOpen/splot_cover_v1.csv&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sPlot_cover</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PlotObservationID</th>
+      <th>lat</th>
+      <th>long</th>
+      <th>cover_tree</th>
+      <th>cover_shrub</th>
+      <th>cover_herb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>16.0</td>
+      <td>62.420000</td>
+      <td>-154.180000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>17.0</td>
+      <td>62.420000</td>
+      <td>-154.180000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>18.0</td>
+      <td>62.420000</td>
+      <td>-154.180000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>20.0</td>
+      <td>62.420000</td>
+      <td>-154.180000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>22.0</td>
+      <td>62.420000</td>
+      <td>-154.180000</td>
+      <td>0.000000</td>
+      <td>0.025641</td>
+      <td>0.974359</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>95099</th>
+      <td>1126749.0</td>
+      <td>56.287870</td>
+      <td>27.273862</td>
+      <td>0.000000</td>
+      <td>0.142857</td>
+      <td>0.857143</td>
+    </tr>
+    <tr>
+      <th>95100</th>
+      <td>1126761.0</td>
+      <td>56.939965</td>
+      <td>23.598014</td>
+      <td>0.000000</td>
+      <td>0.010526</td>
+      <td>0.989474</td>
+    </tr>
+    <tr>
+      <th>95101</th>
+      <td>1126769.0</td>
+      <td>56.939965</td>
+      <td>23.598014</td>
+      <td>0.005025</td>
+      <td>0.045226</td>
+      <td>0.949749</td>
+    </tr>
+    <tr>
+      <th>95102</th>
+      <td>1126774.0</td>
+      <td>57.248222</td>
+      <td>22.147667</td>
+      <td>0.038462</td>
+      <td>0.230769</td>
+      <td>0.730769</td>
+    </tr>
+    <tr>
+      <th>95103</th>
+      <td>1126790.0</td>
+      <td>57.563967</td>
+      <td>26.892074</td>
+      <td>0.010460</td>
+      <td>0.194561</td>
+      <td>0.794979</td>
+    </tr>
+  </tbody>
+</table>
+<p>95104 rows × 6 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">})</span>
+
+<span class="n">step</span> <span class="o">=</span> <span class="mi">181</span>
+
+<span class="n">bins_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="n">step</span><span class="p">)</span> 
+<span class="n">bins_y</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="nb">int</span><span class="p">(((</span><span class="n">step</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">sPlot_cover</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">sPlot_cover</span><span class="p">[</span><span class="s1">&#39;long&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins_x</span><span class="p">)</span>
+<span class="n">sPlot_cover</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">sPlot_cover</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins_y</span><span class="p">)</span>
+<span class="n">sPlot_cover</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sPlot_cover</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+<span class="n">sPlot_cover</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sPlot_cover</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">lf</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;cover_tree&#39;</span><span class="p">,</span> <span class="s1">&#39;cover_shrub&#39;</span><span class="p">,</span> <span class="s1">&#39;cover_herb&#39;</span><span class="p">]:</span>
+
+    <span class="n">sPlot_raster</span> <span class="o">=</span> <span class="n">sPlot_cover</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">sPlot_lf_p</span> <span class="o">=</span> <span class="n">sPlot_raster</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="s1">&#39;y_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="n">lf</span><span class="p">)</span>
+    <span class="c1"># data format</span>
+    <span class="n">data_crs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+    
+    <span class="c1">#for colorbar</span>
+    <span class="n">levels</span><span class="o">=</span> <span class="n">MaxNLocator</span><span class="p">(</span><span class="n">nbins</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">tick_values</span><span class="p">(</span><span class="n">sPlot_cover</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">sPlot_cover</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;gist_yarg&#39;</span><span class="p">)</span>
+    <span class="n">norm</span> <span class="o">=</span> <span class="n">BoundaryNorm</span><span class="p">(</span><span class="n">levels</span><span class="p">,</span> <span class="n">ncolors</span><span class="o">=</span><span class="n">cmap</span><span class="o">.</span><span class="n">N</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">im_ratio</span> <span class="o">=</span> <span class="n">sPlot_lf_p</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">sPlot_lf_p</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1">#plot map</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span> <span class="c1"># I created a new figure and set up its size</span>
+
+    <span class="c1">#create base plot of a world map</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">())</span> <span class="c1"># I used the PlateCarree projection from cartopy</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_global</span><span class="p">()</span>
+    
+    <span class="c1">#add grid with values</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">bins_x</span><span class="p">,</span> <span class="n">bins_y</span><span class="p">,</span> <span class="n">sPlot_lf_p</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gist_yarg&quot;</span><span class="p">,</span> 
+                   <span class="n">vmin</span><span class="o">=</span><span class="n">sPlot_raster</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+                  <span class="n">vmax</span><span class="o">=</span><span class="n">sPlot_raster</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+                      <span class="n">transform</span><span class="o">=</span><span class="n">data_crs</span><span class="p">)</span> 
+    
+    <span class="c1">#add color bar</span>
+    <span class="n">label</span><span class="o">=</span> <span class="s1">&#39;percent observation&#39;</span> <span class="o">+</span> <span class="n">lf</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span><span class="n">fraction</span><span class="o">=</span><span class="mf">0.046</span><span class="o">*</span><span class="n">im_ratio</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.04</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span> <span class="p">)</span>
+
+    <span class="c1">#add coastlines</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s1">&#39;110m&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+
+    <span class="c1">#set title</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span> <span class="s2">&quot;iNaturalist &quot;</span> <span class="o">+</span> <span class="n">lf</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+    
+    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;../Figures/sPlot_&#39;</span> <span class="o">+</span> <span class="n">lf</span> <span class="o">+</span> <span class="s1">&#39;_cover.pdf&#39;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>  
+
+   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_36_0.png" src="_images/Chapter_11_Growth_Forms_Coverage_36_0.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_36_1.png" src="_images/Chapter_11_Growth_Forms_Coverage_36_1.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_36_2.png" src="_images/Chapter_11_Growth_Forms_Coverage_36_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sPlot_raster</span> <span class="o">=</span> <span class="n">sPlot_cover</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;cover_tree&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">lf</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;cover_shrub&#39;</span><span class="p">,</span> <span class="s1">&#39;cover_herb&#39;</span><span class="p">]:</span>
+
+    <span class="n">sPlot_raster</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span> <span class="o">=</span> <span class="n">sPlot_cover</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="n">lf</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sPlot_raster</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x_bin</th>
+      <th>y_bin</th>
+      <th>cover_tree</th>
+      <th>cover_shrub</th>
+      <th>cover_herb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-180.0</td>
+      <td>-90.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-180.0</td>
+      <td>-88.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-180.0</td>
+      <td>-86.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-180.0</td>
+      <td>-84.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-180.0</td>
+      <td>-82.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>16195</th>
+      <td>178.0</td>
+      <td>80.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16196</th>
+      <td>178.0</td>
+      <td>82.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16197</th>
+      <td>178.0</td>
+      <td>84.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16198</th>
+      <td>178.0</td>
+      <td>86.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16199</th>
+      <td>178.0</td>
+      <td>88.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>16200 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">lf</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;cover_tree&#39;</span><span class="p">,</span> <span class="s1">&#39;cover_shrub&#39;</span><span class="p">,</span> <span class="s1">&#39;cover_herb&#39;</span><span class="p">]:</span>
+    <span class="n">sPlot_raster</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span> <span class="o">=</span> <span class="n">sPlot_cover</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="n">lf</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">sPlot_raster</span><span class="p">[</span><span class="n">lf</span><span class="p">],</span><span class="n">grouped_all</span><span class="p">[</span><span class="n">lf</span><span class="p">])</span>
+        
+    <span class="n">correlation_xy</span> <span class="o">=</span> <span class="n">sPlot_raster</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">grouped_all</span><span class="p">[</span><span class="n">lf</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">lf</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correlation_xy</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cover_tree 0.20960458938750362
+cover_shrub 0.11001097795490279
+cover_herb 0.19741552527140613
+</pre></div>
+</div>
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_39_1.png" src="_images/Chapter_11_Growth_Forms_Coverage_39_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iNat_melt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">grouped_all</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span><span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> 
+        <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;cover_tree&quot;</span><span class="p">,</span><span class="s2">&quot;cover_shrub&quot;</span><span class="p">,</span><span class="s2">&quot;cover_herb&quot;</span><span class="p">],</span>
+        <span class="n">value_name</span><span class="o">=</span> <span class="s2">&quot;iNat coverage&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sPlot_melt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">sPlot_raster</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span><span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> 
+        <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;cover_tree&quot;</span><span class="p">,</span><span class="s2">&quot;cover_shrub&quot;</span><span class="p">,</span><span class="s2">&quot;cover_herb&quot;</span><span class="p">],</span>
+        <span class="n">value_name</span><span class="o">=</span> <span class="s2">&quot;sPlot coverage&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">iNat_melt</span><span class="p">,</span> <span class="n">sPlot_melt</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span><span class="s1">&#39;y_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">raster</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;sPlot coverage&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;iNat coverage&quot;</span><span class="p">,</span>
+    <span class="n">col</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span> 
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">,</span> 
+    <span class="n">col_wrap</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> 
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;midnightblue&quot;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;crest&#39;</span><span class="p">,</span>
+    <span class="n">facet_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;sharey&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;sharex&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="k">for</span> <span class="n">traits</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">axes_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">axline</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_43_0.png" src="_images/Chapter_11_Growth_Forms_Coverage_43_0.png" />
+</div>
+</div>
+<div class="section" id="over-biomes">
+<h3>Over biomes<a class="headerlink" href="#over-biomes" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iNat_with_biome</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;iNat_biomes.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iNat_with_biome</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gbifID</th>
+      <th>scientificName</th>
+      <th>decimalLatitude</th>
+      <th>decimalLongitude</th>
+      <th>eventDate</th>
+      <th>dateIdentified</th>
+      <th>Dispersal unit length</th>
+      <th>Leaf Area</th>
+      <th>SLA</th>
+      <th>Leaf C</th>
+      <th>...</th>
+      <th>Leaf N P ratio</th>
+      <th>Leaf P</th>
+      <th>Plant Height</th>
+      <th>Seed mass</th>
+      <th>Seed length</th>
+      <th>Seeds per rep. unit</th>
+      <th>Stem conduit density</th>
+      <th>SSD</th>
+      <th>Conduit element length</th>
+      <th>BIOME</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1990599612</td>
+      <td>Macaranga tanarius</td>
+      <td>23.122994</td>
+      <td>120.534961</td>
+      <td>2019-01-25T14:51:00</td>
+      <td>2019-01-27T13:49:07</td>
+      <td>NaN</td>
+      <td>10.997687</td>
+      <td>2.848944</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>1.064711</td>
+      <td>2.183426</td>
+      <td>3.427650</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-0.785087</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1990599668</td>
+      <td>Adiantum capillus-veneris</td>
+      <td>23.123053</td>
+      <td>120.536422</td>
+      <td>2019-01-25T15:36:00</td>
+      <td>2019-01-27T14:22:54</td>
+      <td>NaN</td>
+      <td>4.088585</td>
+      <td>4.030621</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>-1.021651</td>
+      <td>-1.213114</td>
+      <td>-1.890699</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1978441599</td>
+      <td>Chloris barbata</td>
+      <td>23.123362</td>
+      <td>120.183891</td>
+      <td>2018-12-16T17:21:58</td>
+      <td>2018-12-16T13:14:40</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-1.565953</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1883470731</td>
+      <td>Adiantum capillus-veneris</td>
+      <td>23.123363</td>
+      <td>120.536638</td>
+      <td>2018-03-11T11:48:00</td>
+      <td>2018-07-07T12:43:18</td>
+      <td>NaN</td>
+      <td>4.088585</td>
+      <td>4.030621</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>-1.021651</td>
+      <td>-1.213114</td>
+      <td>-1.890699</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2242806671</td>
+      <td>Dioscorea bulbifera</td>
+      <td>23.123399</td>
+      <td>120.533835</td>
+      <td>2019-04-28T10:44:00</td>
+      <td>2019-05-03T12:45:18</td>
+      <td>NaN</td>
+      <td>5.093750</td>
+      <td>3.785888</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.736951</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 25 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">biomes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">iNat_with_biome</span><span class="p">[</span><span class="s1">&#39;BIOME&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+
+<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">biomes</span><span class="p">:</span>
+
+    <span class="n">sub_iNat_with_biome</span> <span class="o">=</span> <span class="n">iNat_with_biome</span><span class="p">[</span><span class="n">iNat_with_biome</span><span class="p">[</span><span class="s2">&quot;BIOME&quot;</span><span class="p">]</span><span class="o">==</span><span class="n">b</span><span class="p">]</span>
+
+    <span class="n">iNat_lf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">sub_iNat_with_biome</span><span class="p">,</span> <span class="n">growth_forms_sum</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;scientificName&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+    <span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[[</span><span class="s2">&quot;is_tree&quot;</span><span class="p">,</span> <span class="s2">&quot;is_shrub&quot;</span><span class="p">,</span> <span class="s2">&quot;is_herb&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;columns&quot;</span><span class="p">)</span>
+    <span class="n">iNat_lf</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s2">&quot;life form&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">})</span>
+
+    <span class="n">step</span> <span class="o">=</span> <span class="mi">181</span>
+
+    <span class="n">bins_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="n">step</span><span class="p">)</span> 
+    <span class="n">bins_y</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="nb">int</span><span class="p">(((</span><span class="n">step</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;decimalLongitude&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins_x</span><span class="p">)</span>
+    <span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;decimalLatitude&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins_y</span><span class="p">)</span>
+    <span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+    <span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;y_bin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+
+    <span class="n">iNat_tree</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">==</span> <span class="s2">&quot;is_tree&quot;</span><span class="p">]</span>
+    <span class="n">iNat_shrub</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">==</span> <span class="s2">&quot;is_shrub&quot;</span><span class="p">]</span>
+    <span class="n">iNat_herb</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="p">[</span><span class="n">iNat_lf</span><span class="p">[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">==</span> <span class="s2">&quot;is_herb&quot;</span><span class="p">]</span>
+
+    <span class="n">grouped_all</span> <span class="o">=</span> <span class="n">iNat_lf</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+    <span class="n">grouped_trees</span> <span class="o">=</span> <span class="n">iNat_tree</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+    <span class="n">grouped_shrubs</span> <span class="o">=</span> <span class="n">iNat_shrub</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+    <span class="n">grouped_herbs</span> <span class="o">=</span> <span class="n">iNat_herb</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;life form&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+    <span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;cover_tree&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped_trees</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span>
+    <span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;cover_shrub&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped_shrubs</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span>
+    <span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;cover_herb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">grouped_herbs</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">grouped_all</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span>
+    
+    <span class="c1"># print correlation</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">lf</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;cover_tree&#39;</span><span class="p">,</span> <span class="s1">&#39;cover_shrub&#39;</span><span class="p">,</span> <span class="s1">&#39;cover_herb&#39;</span><span class="p">]:</span>
+        <span class="n">sPlot_raster</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span> <span class="o">=</span> <span class="n">sPlot_cover</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="n">lf</span><span class="p">]</span>        
+        <span class="n">correlation_xy</span> <span class="o">=</span> <span class="n">sPlot_raster</span><span class="p">[</span><span class="n">lf</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">grouped_all</span><span class="p">[</span><span class="n">lf</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">lf</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correlation_xy</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    
+    <span class="n">iNat_melt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">grouped_all</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span><span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> 
+        <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;cover_tree&quot;</span><span class="p">,</span><span class="s2">&quot;cover_shrub&quot;</span><span class="p">,</span><span class="s2">&quot;cover_herb&quot;</span><span class="p">],</span>
+        <span class="n">value_name</span><span class="o">=</span> <span class="s2">&quot;iNat cover&quot;</span><span class="p">)</span>
+    <span class="n">sPlot_melt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">sPlot_raster</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span><span class="s1">&#39;y_bin&#39;</span><span class="p">],</span> 
+        <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;cover_tree&quot;</span><span class="p">,</span><span class="s2">&quot;cover_shrub&quot;</span><span class="p">,</span><span class="s2">&quot;cover_herb&quot;</span><span class="p">],</span>
+        <span class="n">value_name</span><span class="o">=</span> <span class="s2">&quot;sPlot cover&quot;</span><span class="p">)</span>
+    
+    <span class="n">raster</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">iNat_melt</span><span class="p">,</span> <span class="n">sPlot_melt</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_bin&#39;</span><span class="p">,</span><span class="s1">&#39;y_bin&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">])</span>
+    
+    <span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">raster</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;sPlot cover&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;iNat cover&quot;</span><span class="p">,</span>
+    <span class="n">col</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span> 
+    <span class="c1">#hue=&quot;NumberiNatObservations&quot;, </span>
+    <span class="c1">#size=&quot;NumberiNatObservations&quot;,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">,</span> 
+    <span class="c1">#hue=&quot;Weights&quot;,</span>
+    <span class="n">col_wrap</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> 
+    <span class="c1">#aspect = 1,  height = 4,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;midnightblue&quot;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;crest&#39;</span><span class="p">,</span>
+    <span class="n">facet_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;sharey&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;sharex&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+    
+    <span class="n">index</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">traits</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">g</span><span class="o">.</span><span class="n">axes_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axline</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+        <span class="c1"># Iterate over each subplot to customize further</span>
+
+        <span class="n">trait_title</span><span class="o">=</span> <span class="n">b</span>
+        <span class="c1"># Add the title as an annotation within the plot</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="o">.</span><span class="mi">95</span><span class="p">,</span> <span class="n">trait_title</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+        <span class="n">index</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axline</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+
+    
+    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;../Figures/corr_biome&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_cover.pdf&#39;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+cover_tree 0.01943613258365132
+cover_shrub 0.028058360539673456
+cover_herb 0.0022278128815516945
+2.0
+cover_tree 0.00495158098325045
+cover_shrub 0.0021841156153433973
+cover_herb 0.0017625094597744017
+3.0
+cover_tree 0.27454095391406436
+cover_shrub 0.02880357026669633
+cover_herb 0.004831038955014629
+4.0
+cover_tree 0.259079820611657
+cover_shrub 0.006749994097072907
+cover_herb 0.23471860018958288
+5.0
+cover_tree 0.0902670010518872
+cover_shrub 0.07357112645012613
+cover_herb 0.17702590884327152
+6.0
+cover_tree 0.015465784550899028
+cover_shrub 0.014347538706417832
+cover_herb 0.010721767313240553
+7.0
+cover_tree 0.003077455550975538
+cover_shrub 2.643230909102668e-05
+cover_herb 0.018979266464673905
+8.0
+cover_tree 0.019313094032917352
+cover_shrub 0.1095073129145167
+cover_herb 0.13137953769498106
+9.0
+cover_tree 1.9096182179645747e-05
+cover_shrub 0.16424750138680017
+cover_herb 0.12904371358220107
+10.0
+cover_tree 0.015454822638076557
+cover_shrub 0.00029106358542621644
+cover_herb 0.04854474044738274
+11.0
+cover_tree 0.02413902443214224
+cover_shrub 0.023572234963179787
+cover_herb 0.04896684519451854
+12.0
+cover_tree 0.06588072711803293
+cover_shrub 0.01176192277333619
+cover_herb 0.014151478930656908
+13.0
+cover_tree 0.07586388909129714
+cover_shrub 0.036485178451133755
+cover_herb 0.03687038140378628
+14.0
+cover_tree 0.08233330012387073
+cover_shrub 0.00024794574677113615
+cover_herb 0.0372847032193021
+</pre></div>
+</div>
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_1.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_1.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_2.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_2.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_3.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_3.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_4.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_4.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_5.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_5.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_6.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_6.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_7.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_7.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_8.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_8.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_9.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_9.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_10.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_10.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_11.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_11.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_12.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_12.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_13.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_13.png" />
+<img alt="_images/Chapter_11_Growth_Forms_Coverage_47_14.png" src="_images/Chapter_11_Growth_Forms_Coverage_47_14.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Chapter_10_Differences_among_biomes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Differences among biomes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Chapter_8_Compare%20to%20Published%20Trait%20Maps.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Compare sPlotOpen to published trait maps</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sophie Wolf et al.<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
