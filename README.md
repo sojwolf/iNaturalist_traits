@@ -100,23 +100,21 @@ When asked which traits you would like to download, type in the following list. 
 
 Continue without species list and choose open trait data only. You will receive a download link via e-mail after about one or two days.
 
+The iNaturalist and TRY downloads will contain files that look something like this:
+
+iNaturalist_filename: ```0354963-210914110416597.csv```
+TRY_filename: ```19287.txt```
+
 ### Link iNaturalist and TRY and generate trait maps
 
-Follow the more detailed workflow as documented in https://sojwolf.github.io/iNaturalist_traits/ or use the following python script to generate 0.5 and 2 degree maps.
-
-Execute ```make_traitmaps.py``` in the folder you want to save the trait maps in:
+Download the ```make_traitmaps/``` folder and execute the containing python script to generate 0.5 and 2 degree maps.
 
 ```
 python make_traitmaps.py -n iNaturalist_filename -t TRY_filename -f False
 ```
 
-The iNaturalist and TRY downloads will contain files that look something like this:
-
-iNaturalist: ```0354963-210914110416597.csv```
-TRY: ```19287.txt```
-
 Run-time is around 2 hours. If you would like to apply a basic fuzzy name matching, use -f True.
-
+Follow the more detailed workflow as documented in https://sojwolf.github.io/iNaturalist_traits/.
 
 ### Requirements
 
