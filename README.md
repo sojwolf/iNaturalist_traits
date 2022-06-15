@@ -4,6 +4,7 @@ This repository hosts additional material accompanying the manuscript *Citizen s
 
   1. The entire workflow documentation: https://sojwolf.github.io/iNaturalist_traits/
   2. GeoTiff trait maps based on iNaturalist observations and sPlotOpen observations, respectively
+  3. How to create updated trait maps
 
 ## Trait maps
 
@@ -76,6 +77,7 @@ df_spread = df.pivot(index= ['x','y'],columns='variable',values='band_data').res
 ### Load in R
 
 
+
 ## Create updated trait maps
 
 If you would like to use the most recent vascular plant data, instead of the maps provided here, the following instructions will guide you.
@@ -103,17 +105,20 @@ Continue without species list and choose open trait data only. You will receive 
 The iNaturalist and TRY downloads will contain files that look something like this:
 
 iNaturalist_filename: ```0354963-210914110416597.csv```
+
 TRY_filename: ```19287.txt```
+
 
 ### Link iNaturalist and TRY and generate trait maps
 
-Download the ```make_traitmaps/``` folder and execute the containing python script to generate 0.5 and 2 degree maps.
+Download the ```make_traitmaps/``` folder from this repository and execute the containing python script to generate 0.5 and 2 degree maps.
 
 ```
 python make_traitmaps.py -n iNaturalist_filename -t TRY_filename -f False
 ```
 
 Run-time is around 2 hours. If you would like to apply a basic fuzzy name matching, use -f True.
+You can remove the file ```iNat_TRY_log.csv``` if you do not need information on each observation for your analysis.
 Follow the more detailed workflow as documented in https://sojwolf.github.io/iNaturalist_traits/.
 
 ### Requirements
