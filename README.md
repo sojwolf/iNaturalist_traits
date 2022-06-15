@@ -123,7 +123,7 @@ Download the ```make_traitmaps/``` folder from this repository and execute the c
 python make_traitmaps.py -n iNaturalist_filename -t TRY_filename -f False
 ```
 
-Run-time is around 2 hours. If you would like to apply a basic fuzzy name matching, use -f True.
+Run-time is around 2 hours. If you would like to apply a basic fuzzy name matching, use -f True (adds around 1% more data).
 You can remove the file ```iNat_TRY_log.csv``` if you do not need information on each observation for your analysis.
 For more information, please refer to the workflow documentation at https://sojwolf.github.io/iNaturalist_traits/.
 
