@@ -8,26 +8,23 @@ import os
 
 iNat_filename = ''
 TRY_filename = ''
-fuzzy = False
+
 try:
-    opts, args = getopt.getopt(sys.argv[1:],"hi:t:f:",["iNat=","TRY=","fuzzy="])
+    opts, args = getopt.getopt(sys.argv[1:],"hi:t:",["iNat=","TRY="])
 except getopt.GetoptError:
     print('Error: use ')
     sys.exit(2)
 for opt, arg in opts:
     if opt == '-h':
-        print('test.py -i <inputfile> -o <outputfile>')
+        print('python make_traitmaps.py -n iNaturalist_filename -t TRY_filename')
         sys.exit()
     elif opt in ("-i", "--iNat"):
         iNat_filename = arg
     elif opt in ("-t", "--TRY"):
         TRY_filename = arg
-    elif opt in ("-f", "--fuzzy"):
-        fuzzy = arg
 
 print('iNat file: ', iNat_filename)
 print( 'TRY file: ', TRY_filename)
-print ('Fuzzy matching ', fuzzy)
 
 
 
@@ -145,65 +142,10 @@ subsets = [iNat_TRY, iNat_TRY_syn]
 iNat_TRY_all = pd.concat(subsets)
 iNat_TRY_all = iNat_TRY_all.drop(['AccSpeciesName', 'SpeciesName'], axis = 1)
 
-####### if fuzzy match included #######
-if fuzzy == "True":
-    print("Getting fuzzy matches...")
-    # fuzzy matching
-    from rapidfuzz import process, fuzz
-
-    # filter for observations not in merged dataframe:
-    iNat_rest_2 = iNat[~iNat.gbifID.isin(iNat_TRY_all['gbifID'])]
-    # get only unique species names:
-    iNat_rest_unique = iNat_rest_2.drop_duplicates(subset=['scientificName'])
-
-    # get only unique unmatched TRY species names:
-
-    TRY_rest = TRY[~TRY.AccSpeciesName.isin(iNat_TRY_all['scientificName'])]
-    TRY_alt_rest =  TRY_syn[~TRY_syn.SpeciesName.isin(iNat_TRY_all['scientificName'])]
-
-    TRY_alt_rest.rename(columns = {'SpeciesName':'AccSpeciesName'}, inplace = True)
-
-    TRY_R = pd.concat([TRY_rest, TRY_alt_rest])
-    TRY_rest_unique = TRY_R.drop_duplicates(subset=['AccSpeciesName'])
-
-    choices = TRY_rest_unique["AccSpeciesName"].apply(str)
-    queries = iNat_rest_unique["scientificName"]
-
-
-    score_sort = [(x,) + i
-             for x in queries
-             for i in process.extract(x, choices, score_cutoff=90, scorer=fuzz.token_sort_ratio) ]
-
-    fuzzy_matches = pd.DataFrame(score_sort)
-    fuzzy_matches.rename(columns = {'0':'scientificName'}, inplace = True)
-    fuzzy_matches.rename(columns = {'1':'fuzzyName'}, inplace = True)
-    iNat_rest_fuzzy = pd.merge(iNat_rest_2, fuzzy_matches, on='scientificName', how='inner')
-
-    TRY.rename(columns = {'AccSpeciesName':'fuzzyName'}, inplace = True)
-    iNat_TRY_fuzzy_1 = pd.merge(iNat_rest_fuzzy, TRY, on='fuzzyName', how='inner')
-    iNat_TRY_fuzzy_rest = iNat_rest_fuzzy[~iNat_rest_fuzzy.gbifID.isin(iNat_TRY_fuzzy_1['gbifID'])]
-    iNat_TRY_fuzzy_1= iNat_TRY_fuzzy_1.drop(columns=["fuzzyName", "2", "3"])
-
-    TRY_alt.rename(columns = {'SpeciesName':'fuzzyName'}, inplace = True)
-    iNat_TRY_fuzzy_2 = pd.merge(iNat_TRY_fuzzy_rest, TRY_alt, on='fuzzyName', how='inner')
-    iNat_TRY_fuzzy_2= iNat_TRY_fuzzy_2.drop(columns=["fuzzyName", "2", "3"])
-    # merge fuzzy-consolidated species name match and fuzzy-original match
-    frames = [iNat_TRY_fuzzy_1, iNat_TRY_fuzzy_2]
-
-    iNat_TRY_fuzzy_merge = pd.concat(frames)
-    iNat_TRY_fuzzy_merge_2 = (iNat_TRY_fuzzy_merge.assign(counts=iNat_TRY_fuzzy_merge.count(axis=1)).sort_values(['gbifID', 'counts']).drop_duplicates('gbifID', keep='last').drop('counts', axis=1))
-
-    frames = [iNat_TRY_all, iNat_TRY_fuzzy_merge_2]
-
-    iNat_TRY_final = pd.concat(frames)
-    iNat_TRY_all = iNat_TRY_final
-
 trait = iNat_TRY_all.columns[6:24]
 
 iNat_TRY_all = iNat_TRY_all.replace(-np.inf, np.nan)
 iNat_TRY_all = iNat_TRY_all.replace(np.inf, np.nan)
-
-#iNat_TRY_all.to_csv("iNat_TRY.csv", index=False)
 
 iNat_TRY_all.loc[:, trait] = np.log(iNat_TRY_all[trait])
 

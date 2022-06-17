@@ -10,9 +10,9 @@ This repository hosts additional material accompanying the manuscript *Citizen s
 
 ### Versions
 
-The maps available here were generated using iNaturalist observations downloaded on January 4, 2022 (https://doi.org/10.15468/dl.34tjre) and sPlotOpen version 52.
+The maps available here were generated using iNaturalist observations downloaded on January 4, 2022 (https://doi.org/10.15468/dl.34tjre) and sPlotOpen version 52 (https://idata.idiv.de/ddm/Data/ShowData/3474?version=52).
 
-If you would like to update the iNaturalist maps using the most recent data, please refer to the section **Create updated trait maps** below.
+If you would like to update the iNaturalist maps using the most recent TRY (trait) and iNaturalist data, please refer to the section **Create updated trait maps** below.
 
 1. iNaturalist
 
@@ -82,6 +82,9 @@ To load one trait map:
 library(raster)
 
 plant_height <- raster("iNat_Plant.Height_05deg_expln.tif")
+
+trait_stack <- list.files(pattern = "05deg_expln.tif")
+trait_stack <- stack(all_maps)
 ```
 
 ## Create updated trait maps
@@ -117,15 +120,15 @@ TRY_filename: ```19287.txt```
 
 ### Link iNaturalist and TRY and generate trait maps
 
-Download the ```make_traitmaps/``` folder from this repository and execute the containing python script to generate 0.5 and 2 degree maps.
+Download the ```make_traitmaps/``` folder from this repository and execute the containing python script to generate 0.5 and 2 degree maps. Make sure the R script make_iNat_traitmaps.R is also in the directory.
 
 ```
-python make_traitmaps.py -n iNaturalist_filename -t TRY_filename -f False
+python make_traitmaps.py -n iNaturalist_filename -t TRY_filename
 ```
 
-Run-time is around 2 hours. If you would like to apply a basic fuzzy name matching, use -f True (adds around 1% more data).
-You can remove the file ```iNat_TRY_log.csv``` if you do not need information on each observation for your analysis.
-For more information, please refer to the workflow documentation at https://sojwolf.github.io/iNaturalist_traits/.
+This script does not apply fuzzy name matching, since it adds around 1% more data. If you want to add a fuzzy match or want more information, please refer to the workflow documentation at https://sojwolf.github.io/iNaturalist_traits/.
+After running the script, you can remove the file ```iNat_TRY_log.csv``` if you do not need information on each observation for your analysis.
+
 
 ### Requirements
 
@@ -135,15 +138,12 @@ For handling data frames and (multidimensional) arrays:
   - ```pandas```
   - ```numpy```
 
-For fuzzy matching, if you would like to use this feature:
-  - ```rapidfuzz```
-
 For system interface:
   - ```getopt```
   - ```sys```
 
 **R packages**:
 
-For making rasters and exporting geotiffs:
+For making rasters and exporting GeoTiffs:
   - ```raster```
   - ```rgdal```
