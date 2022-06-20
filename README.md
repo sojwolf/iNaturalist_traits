@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/455158085.svg)](https://zenodo.org/badge/latestdoi/455158085)
+
 # Citizen science plant observations encode global trait patterns
 
 This repository hosts additional material accompanying the manuscript *Citizen science plant observations encode global trait patterns*.
