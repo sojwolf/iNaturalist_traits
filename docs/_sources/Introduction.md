@@ -43,19 +43,32 @@ The following packages are needed for this workflow. Each subsection lists the t
 
 For handling data frames and (multidimensional) arrays:
   - ```pandas```
-  - ```geopandas```
   - ```numpy```
   - ```xarray```
+
+For handling geospatial data:
+  - ```geopandas```
+  - ```shapely```
+  - ```rasterio```
 
 For plotting:
   - ```matplotlib```
   - ```seaborn```
   - ```cartopy```
+  - ```pyproj```
 
 For fuzzy matching:
   - ```rapidfuzz```
+
+For statistics:
+  - ```statsmodels```
+  - ```pylr2```
 
 **R packages**:
 
 For handling rasters:
   - ```raster```
+  - ```rgdal```
+
+For SMA regression:  
+  - ```smatr```

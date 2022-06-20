@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Compare sPlotOpen and iNaturalist trait maps &#8212; Citizen science plant observations encode global trait patterns</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -62,7 +61,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +84,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
       
@@ -86,14 +100,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Introduction.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Header%20Preprocessing.html">
    Preprocessing
@@ -191,107 +206,209 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Chapter_6_Compare_trait_maps_sPlot_iNat.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/sojwolf/iNaturalist_traits"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/sojwolf/iNaturalist_traits/issues/new?title=Issue%20on%20page%20%2FChapter_6_Compare_trait_maps_sPlot_iNat.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/sojwolf/iNaturalist_traits/master?urlpath=tree/docs/Chapter_6_Compare_trait_maps_sPlot_iNat.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/sojwolf/iNaturalist_traits/master?urlpath=tree/docs/Chapter_6_Compare_trait_maps_sPlot_iNat.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/sojwolf/iNaturalist_traits"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/sojwolf/iNaturalist_traits/issues/new?title=Issue%20on%20page%20%2FChapter_6_Compare_trait_maps_sPlot_iNat.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Chapter_6_Compare_trait_maps_sPlot_iNat.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#load-data">
    Load Data
@@ -366,12 +483,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Compare sPlotOpen and iNaturalist trait maps</h1>
@@ -462,11 +578,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="compare-splotopen-and-inaturalist-trait-maps">
-<h1>Compare sPlotOpen and iNaturalist trait maps<a class="headerlink" href="#compare-splotopen-and-inaturalist-trait-maps" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="compare-splotopen-and-inaturalist-trait-maps">
+<h1>Compare sPlotOpen and iNaturalist trait maps<a class="headerlink" href="#compare-splotopen-and-inaturalist-trait-maps" title="Permalink to this headline">#</a></h1>
 <p>We will create trait maps with the iNaturalist observation data and evaluate the maps using the sPlotOpen data.</p>
 <p>This section covers:</p>
 <ul class="simple">
@@ -499,8 +616,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="load-data">
-<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this headline">¶</a></h2>
+<section id="load-data">
+<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iNat_TRY</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;iNat_TRY_log.csv&quot;</span><span class="p">)</span>
@@ -713,9 +830,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p>2 rows × 86 columns</p>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="visualize-trait-maps">
-<h2>Visualize trait maps<a class="headerlink" href="#visualize-trait-maps" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="visualize-trait-maps">
+<h2>Visualize trait maps<a class="headerlink" href="#visualize-trait-maps" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_grid</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">,</span> <span class="n">deg</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
@@ -808,8 +925,8 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_17.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_10_17.png" />
 </div>
 </div>
-<div class="section" id="compare-to-maps-created-using-r-raster-load-traitmaps-from-geotiff-data">
-<h3>Compare to maps created using R <code class="docutils literal notranslate"><span class="pre">raster</span></code>: Load traitmaps from geotiff data<a class="headerlink" href="#compare-to-maps-created-using-r-raster-load-traitmaps-from-geotiff-data" title="Permalink to this headline">¶</a></h3>
+<section id="compare-to-maps-created-using-r-raster-load-traitmaps-from-geotiff-data">
+<h3>Compare to maps created using R <code class="docutils literal notranslate"><span class="pre">raster</span></code>: Load traitmaps from geotiff data<a class="headerlink" href="#compare-to-maps-created-using-r-raster-load-traitmaps-from-geotiff-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
@@ -1193,10 +1310,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="grid-mean-trait-values-at-different-resolutions">
-<h2>Grid mean trait values at different resolutions<a class="headerlink" href="#grid-mean-trait-values-at-different-resolutions" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="grid-mean-trait-values-at-different-resolutions">
+<h2>Grid mean trait values at different resolutions<a class="headerlink" href="#grid-mean-trait-values-at-different-resolutions" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">global_grid_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">long</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">deg</span><span class="p">,</span> <span class="n">variables</span><span class="p">):</span>
@@ -1237,8 +1354,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="check-function-at-2-degree-resolution">
-<h3>Check function at 2 degree resolution<a class="headerlink" href="#check-function-at-2-degree-resolution" title="Permalink to this headline">¶</a></h3>
+<section id="check-function-at-2-degree-resolution">
+<h3>Check function at 2 degree resolution<a class="headerlink" href="#check-function-at-2-degree-resolution" title="Permalink to this headline">#</a></h3>
 <p>To create a dataframe with all traits and the mean log trait values per cell we call <code class="docutils literal notranslate"><span class="pre">global_grid_data()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1381,9 +1498,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="calculate-averages-for-different-resolutions">
-<h3>Calculate averages for different resolutions<a class="headerlink" href="#calculate-averages-for-different-resolutions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="calculate-averages-for-different-resolutions">
+<h3>Calculate averages for different resolutions<a class="headerlink" href="#calculate-averages-for-different-resolutions" title="Permalink to this headline">#</a></h3>
 <p>We now compute these global grids for various grid sizes (in degrees) and all traits. We merge iNat and sPlot into one dataframe and save it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1422,10 +1539,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="calculate-weighted-r">
-<h2>Calculate weighted r<a class="headerlink" href="#calculate-weighted-r" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="calculate-weighted-r">
+<h2>Calculate weighted r<a class="headerlink" href="#calculate-weighted-r" title="Permalink to this headline">#</a></h2>
 <p>Calculate weights per grid cell area and weighted r for all traits and all grid sizes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1677,13 +1794,13 @@ const thebe_selector_output = ".output, .cell_output"
       <td>0.337698</td>
       <td>0.593019</td>
       <td>0.592591</td>
-      <td>0.366520</td>
+      <td>0.36652</td>
       <td>0.261048</td>
       <td>0.459257</td>
-      <td>0.389100</td>
-      <td>0.582170</td>
-      <td>0.484310</td>
-      <td>0.261350</td>
+      <td>0.3891</td>
+      <td>0.58217</td>
+      <td>0.48431</td>
+      <td>0.26135</td>
       <td>0.061491</td>
       <td>0.680519</td>
       <td>0.629418</td>
@@ -1724,12 +1841,12 @@ const thebe_selector_output = ".output, .cell_output"
       <td>0.369761</td>
       <td>0.203682</td>
       <td>0.356999</td>
-      <td>0.405710</td>
+      <td>0.40571</td>
       <td>0.508895</td>
       <td>0.368398</td>
       <td>0.250143</td>
       <td>0.146879</td>
-      <td>0.570690</td>
+      <td>0.57069</td>
       <td>0.556945</td>
       <td>0.278735</td>
       <td>0.50</td>
@@ -1747,7 +1864,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>0.168444</td>
       <td>0.292185</td>
       <td>0.371618</td>
-      <td>0.424300</td>
+      <td>0.4243</td>
       <td>0.298729</td>
       <td>0.196469</td>
       <td>0.121625</td>
@@ -1763,7 +1880,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>0.423198</td>
       <td>0.195532</td>
       <td>0.302716</td>
-      <td>0.244600</td>
+      <td>0.2446</td>
       <td>0.446798</td>
       <td>0.344023</td>
       <td>0.173674</td>
@@ -1922,9 +2039,9 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_48_0.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_48_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="determine-slope-of-the-correlation">
-<h2>Determine slope of the correlation<a class="headerlink" href="#determine-slope-of-the-correlation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="determine-slope-of-the-correlation">
+<h2>Determine slope of the correlation<a class="headerlink" href="#determine-slope-of-the-correlation" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylr2</span> <span class="kn">import</span> <span class="n">regress2</span>
@@ -1964,7 +2081,6 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="p">[</span><span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">]</span>
-
 <span class="n">results</span> <span class="o">=</span> <span class="n">regress2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">_method_type_2</span><span class="o">=</span><span class="s2">&quot;reduced major axis&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1977,11 +2093,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;slope&#39;: 0.7606001314977555,
- &#39;intercept&#39;: -0.1582780708512439,
- &#39;r&#39;: 0.5985443572644115,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;slope&#39;: 0.7606001314977557,
+ &#39;intercept&#39;: -0.15827807085124396,
+ &#39;r&#39;: 0.5985443572644118,
  &#39;std_slope&#39;: 0.021256591178264863,
- &#39;std_intercept&#39;: 0.026223999235003993,
+ &#39;std_intercept&#39;: 0.026223999235003997,
  &#39;predict&#39;: 10519   -1.216659
  10520   -0.959619
  10521   -0.800042
@@ -1998,10 +2114,52 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slope_boot</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3000</span><span class="p">):</span>
+    <span class="n">sample_df</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">raster_means_trait</span><span class="p">),</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    
+    <span class="n">x</span> <span class="o">=</span> <span class="n">sample_df</span><span class="p">[</span><span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">sample_df</span><span class="p">[</span><span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">]</span>
+
+    <span class="n">results</span> <span class="o">=</span> <span class="n">regress2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">_method_type_2</span><span class="o">=</span><span class="s2">&quot;reduced major axis&quot;</span><span class="p">)</span>
+    <span class="n">slope_boot</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s2">&quot;slope&quot;</span><span class="p">])</span>
+    
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">slope_boot</span><span class="p">,</span><span class="mf">0.05</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7271391098609535
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">slope_boot</span><span class="p">,</span><span class="mf">0.95</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7941371924153917
+</pre></div>
+</div>
+</div>
+</div>
 <p>For all traits:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slopes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;slope&#39;</span><span class="p">,</span> <span class="s1">&#39;intercept&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slopes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;slope&#39;</span><span class="p">,</span><span class="s1">&#39;intercept&#39;</span><span class="p">,</span><span class="s1">&#39;conf_int&#39;</span><span class="p">])</span>
 
 <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">trait</span><span class="p">:</span>
     <span class="c1"># subset only one trait</span>
@@ -2028,7 +2186,22 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="n">slope</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s2">&quot;slope&quot;</span><span class="p">]</span>
     <span class="n">intercept</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s2">&quot;intercept&quot;</span><span class="p">]</span>
     
-    <span class="n">slopes</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">]</span>
+    <span class="c1"># get 95% confidence interval</span>
+    
+    <span class="n">slope_boot</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3000</span><span class="p">):</span>
+        <span class="n">sample_df</span> <span class="o">=</span> <span class="n">raster_means_trait</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">raster_means_trait</span><span class="p">),</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    
+        <span class="n">x</span> <span class="o">=</span> <span class="n">sample_df</span><span class="p">[</span><span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">]</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">sample_df</span><span class="p">[</span><span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">]</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="n">regress2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">_method_type_2</span><span class="o">=</span><span class="s2">&quot;reduced major axis&quot;</span><span class="p">)</span>
+        <span class="n">slope_boot</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s2">&quot;slope&quot;</span><span class="p">])</span>
+    
+    <span class="n">conf_int</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">slope_boot</span><span class="p">,</span><span class="mf">0.05</span><span class="p">),</span><span class="mi">2</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">slope_boot</span><span class="p">,</span><span class="mf">0.95</span><span class="p">),</span><span class="mi">2</span><span class="p">)]</span> <span class="c1"># 95% conf_interval</span>
+    
+    <span class="n">slopes</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">conf_int</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -2085,14 +2258,14 @@ const thebe_selector_output = ".output, .cell_output"
       <td>1.027592</td>
       <td>1.414497</td>
       <td>1.238462</td>
-      <td>1.061700</td>
+      <td>1.0617</td>
       <td>1.129783</td>
       <td>1.392226</td>
-      <td>1.077500</td>
+      <td>1.0775</td>
       <td>2.007867</td>
       <td>1.147387</td>
       <td>1.290807</td>
-      <td>0.760600</td>
+      <td>0.7606</td>
       <td>0.841936</td>
       <td>1.279172</td>
       <td>1.351475</td>
@@ -2107,7 +2280,7 @@ const thebe_selector_output = ".output, .cell_output"
       <td>-0.934332</td>
       <td>-1.486539</td>
       <td>-0.207463</td>
-      <td>0.678720</td>
+      <td>0.67872</td>
       <td>-0.126172</td>
       <td>-0.082166</td>
       <td>-0.464251</td>
@@ -2116,21 +2289,252 @@ const thebe_selector_output = ".output, .cell_output"
       <td>-0.158278</td>
       <td>0.417664</td>
       <td>-0.642623</td>
-      <td>0.079200</td>
+      <td>0.0792</td>
       <td>-1.459013</td>
       <td>0.914904</td>
       <td>-0.002103</td>
+    </tr>
+    <tr>
+      <th>conf_int</th>
+      <td>[-0.94, 0.97]</td>
+      <td>[0.97, 1.08]</td>
+      <td>[1.34, 1.49]</td>
+      <td>[1.12, 1.37]</td>
+      <td>[0.99, 1.14]</td>
+      <td>[1.07, 1.19]</td>
+      <td>[1.32, 1.47]</td>
+      <td>[1.01, 1.15]</td>
+      <td>[1.89, 2.14]</td>
+      <td>[1.08, 1.22]</td>
+      <td>[1.2, 1.38]</td>
+      <td>[0.73, 0.79]</td>
+      <td>[0.79, 0.9]</td>
+      <td>[1.14, 1.42]</td>
+      <td>[1.18, 1.53]</td>
+      <td>[1.38, 1.5]</td>
+      <td>[2.47, 2.69]</td>
+      <td>[0.92, 1.07]</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
+<p>Calculate SMA stats in R:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>library(smatr)
+
+iNat &lt;- read.csv(&quot;grid_means_2_deg.csv&quot;)
+
+traits &lt;- unique(iNat$Trait)
+
+test &lt;- data.frame()
+
+for (t in 1:length(traits)){
+      sub &lt;- iNat[iNat$Trait == traits[[t]],]
+      results &lt;- sma(TraitValue_iNat~TraitValue_sPlot, data=sub, slope.test=1, elev.test=0)
+      coef &lt;- data.frame(results$coef)
+      ci &lt;- data.frame(traits[[t]], coef$coef.SMA.[1], coef$coef.SMA.[2], coef$lower.limit[2], coef$upper.limit[2], results$slopetest[[1]]$p)
+      test &lt;- rbind(test,ci)}
+
+write.csv(test, &quot;sma_stats.csv&quot;)
+
+</pre></div>
 </div>
-<div class="section" id="plot-correlation-plots-for-all-traits-at-2-degree-resolution">
-<h2>Plot correlation plots for all traits at 2 degree resolution<a class="headerlink" href="#plot-correlation-plots-for-all-traits-at-2-degree-resolution" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slopes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;sma_stats.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slopes</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">slopes</span><span class="p">[</span><span class="s2">&quot;traits..t..&quot;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slopes</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Unnamed: 0&quot;</span><span class="p">,</span> <span class="s2">&quot;traits..t..&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slopes</span> <span class="o">=</span> <span class="n">slopes</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slopes</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="nb">list</span><span class="p">([</span><span class="s2">&quot;intercept&quot;</span><span class="p">,</span> <span class="s2">&quot;slope&quot;</span><span class="p">,</span> <span class="s2">&quot;ci_lower&quot;</span><span class="p">,</span> <span class="s2">&quot;ci_upper&quot;</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slopes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>traits..t..</th>
+      <th>Dispersal unit length</th>
+      <th>Leaf Area</th>
+      <th>SLA</th>
+      <th>Leaf C</th>
+      <th>LDMC</th>
+      <th>Leaf fresh mass</th>
+      <th>Leaf N per area</th>
+      <th>Leaf N per mass</th>
+      <th>Leaf delta15N</th>
+      <th>Leaf N P ratio</th>
+      <th>Leaf P</th>
+      <th>Plant Height</th>
+      <th>Seed mass</th>
+      <th>Seed length</th>
+      <th>Seeds per rep. unit</th>
+      <th>Stem conduit density</th>
+      <th>SSD</th>
+      <th>Conduit element length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>intercept</th>
+      <td>2.501463</td>
+      <td>0.160015</td>
+      <td>-0.934332</td>
+      <td>-1.486539e+00</td>
+      <td>-0.207463</td>
+      <td>0.678720</td>
+      <td>-0.126172</td>
+      <td>-0.082166</td>
+      <td>-0.464251</td>
+      <td>-3.755179e-01</td>
+      <td>0.027418</td>
+      <td>-0.158278</td>
+      <td>4.176638e-01</td>
+      <td>-6.426235e-01</td>
+      <td>0.079200</td>
+      <td>-1.459013</td>
+      <td>0.914904</td>
+      <td>-0.002103</td>
+    </tr>
+    <tr>
+      <th>slope</th>
+      <td>-1.137526</td>
+      <td>1.027592</td>
+      <td>1.414497</td>
+      <td>1.238462e+00</td>
+      <td>1.061700</td>
+      <td>1.129783</td>
+      <td>1.392226</td>
+      <td>1.077500</td>
+      <td>2.007867</td>
+      <td>1.147387e+00</td>
+      <td>1.290807</td>
+      <td>0.760600</td>
+      <td>8.419362e-01</td>
+      <td>1.279172e+00</td>
+      <td>1.351475</td>
+      <td>1.435743</td>
+      <td>2.574361</td>
+      <td>0.987289</td>
+    </tr>
+    <tr>
+      <th>ci_lower</th>
+      <td>-1.215182</td>
+      <td>0.976077</td>
+      <td>1.343843</td>
+      <td>1.165017e+00</td>
+      <td>1.000283</td>
+      <td>1.067211</td>
+      <td>1.324024</td>
+      <td>1.017220</td>
+      <td>1.885989</td>
+      <td>1.086091e+00</td>
+      <td>1.219092</td>
+      <td>0.724223</td>
+      <td>7.991787e-01</td>
+      <td>1.200008e+00</td>
+      <td>1.265306</td>
+      <td>1.369064</td>
+      <td>2.452730</td>
+      <td>0.924341</td>
+    </tr>
+    <tr>
+      <th>ci_upper</th>
+      <td>-1.064833</td>
+      <td>1.081825</td>
+      <td>1.488866</td>
+      <td>1.316536e+00</td>
+      <td>1.126888</td>
+      <td>1.196024</td>
+      <td>1.463942</td>
+      <td>1.141351</td>
+      <td>2.137621</td>
+      <td>1.212142e+00</td>
+      <td>1.366740</td>
+      <td>0.798804</td>
+      <td>8.869814e-01</td>
+      <td>1.363558e+00</td>
+      <td>1.443513</td>
+      <td>1.505670</td>
+      <td>2.702024</td>
+      <td>1.054524</td>
+    </tr>
+    <tr>
+      <th>p</th>
+      <td>0.000133</td>
+      <td>0.299447</td>
+      <td>0.000000</td>
+      <td>8.592571e-12</td>
+      <td>0.048924</td>
+      <td>0.000028</td>
+      <td>0.000000</td>
+      <td>0.011068</td>
+      <td>0.000000</td>
+      <td>9.796284e-07</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1.199024e-10</td>
+      <td>5.906386e-14</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.703398</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="plot-correlation-plots-for-all-traits-at-2-degree-resolution">
+<h2>Plot correlation plots for all traits at 2 degree resolution<a class="headerlink" href="#plot-correlation-plots-for-all-traits-at-2-degree-resolution" title="Permalink to this headline">#</a></h2>
 <p>We want to look at the scatterplots a bit closer now. The previous plot shows that we have a high correlation for a number of traits at a resolution of 2 degrees, so we choose this resolution in the following, more detailed analyses.</p>
-<div class="section" id="calculate-axes-ranges">
-<h3>Calculate axes ranges<a class="headerlink" href="#calculate-axes-ranges" title="Permalink to this headline">¶</a></h3>
+<section id="calculate-axes-ranges">
+<h3>Calculate axes ranges<a class="headerlink" href="#calculate-axes-ranges" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate max-min ranges</span>
@@ -2348,9 +2752,9 @@ const thebe_selector_output = ".output, .cell_output"
         <span class="n">ax</span><span class="o">.</span><span class="n">axline</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">ls</span> <span class="o">=</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
         
         <span class="c1"># Plot the splope</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="n">slopes</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">variables</span><span class="p">)]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">slopes</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">variables</span><span class="p">)]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    
+        <span class="n">m</span> <span class="o">=</span> <span class="n">slopes</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">variables</span><span class="p">)]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">slopes</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">variables</span><span class="p">)]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">ci</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">slopes</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">variables</span><span class="p">)]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="mi">2</span><span class="p">),</span> <span class="nb">round</span><span class="p">(</span><span class="n">slopes</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">variables</span><span class="p">)]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="mi">2</span><span class="p">)]</span>
         <span class="c1"># get min and max values </span>
         <span class="n">x_1</span> <span class="o">=</span> <span class="n">ranges</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">variables</span><span class="p">,</span> <span class="s2">&quot;min&quot;</span><span class="p">]</span>
         <span class="c1">#x_2 = ranges.loc[variables, &quot;max&quot;]</span>
@@ -2359,10 +2763,10 @@ const thebe_selector_output = ".output, .cell_output"
         
         <span class="c1"># Add the title as an annotation within the plot</span>
         <span class="k">if</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">sub_title</span><span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;r$^2$ = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">r_all</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">variables</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;y = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;x - &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+            <span class="n">sub_title</span><span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;r = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">r_all</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">variables</span><span class="p">],</span> <span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;y = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>   <span class="o">+</span> <span class="s2">&quot;x - &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">95CI(m) = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ci</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">sub_title</span><span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;r$^2$ = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">r_all</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">variables</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;y = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;x + &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="o">.</span><span class="mi">95</span><span class="p">,</span> <span class="n">sub_title</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
+            <span class="n">sub_title</span><span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;r = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">r_all</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">variables</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="o">+</span>  <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;y = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span>  <span class="s2">&quot;x + &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">95CI(m) = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ci</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sub_title</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
         
 
         <span class="n">index</span><span class="o">+=</span><span class="mi">1</span>
@@ -2376,32 +2780,167 @@ const thebe_selector_output = ".output, .cell_output"
 
     <span class="c1"># Edit some supporting aspects of the plot</span>
     <span class="n">g</span><span class="o">.</span><span class="n">set_titles</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-    <span class="n">g</span><span class="o">.</span><span class="n">set_axis_labels</span><span class="p">(</span><span class="s2">&quot;sPlotOpen pixels&quot;</span><span class="p">,</span> <span class="s2">&quot;iNaturalist pixels&quot;</span><span class="p">)</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">set_axis_labels</span><span class="p">(</span><span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">)</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="plot-scatterplots-for-all-traits">
-<h3>Plot scatterplots for all traits<a class="headerlink" href="#plot-scatterplots-for-all-traits" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="plot-scatterplots-for-all-traits">
+<h3>Plot scatterplots for all traits<a class="headerlink" href="#plot-scatterplots-for-all-traits" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_scatterplots</span><span class="p">(</span><span class="n">raster_means</span><span class="p">,</span> <span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;Trait&quot;</span><span class="p">,</span> 
-                  <span class="n">variables</span><span class="o">=</span><span class="n">trait</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">trait</span><span class="p">,</span> 
-                  <span class="n">label_x</span> <span class="o">=</span> <span class="s2">&quot;sPlotOpen pixels&quot;</span><span class="p">,</span> <span class="n">label_y</span> <span class="o">=</span> <span class="s2">&quot;iNaturalist pixels&quot;</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trait_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dispersal unit length (ln mm)&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf Area (ln mm$^2$)&#39;</span><span class="p">,</span> <span class="s1">&#39;SLA (ln m$^2$/kg)&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf C (ln mg/g)&#39;</span><span class="p">,</span> <span class="s1">&#39;LDMC (ln g/g)&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Leaf fresh mass (ln g)&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf N per area (ln g/m$^2$)&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf N per mass (ln mg/g)&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Leaf delta15N (ln ppm)&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf N P ratio (ln g/g)&#39;</span><span class="p">,</span> <span class="s1">&#39;Leaf P (ln mg/g)&#39;</span><span class="p">,</span> <span class="s1">&#39;Plant Height (ln m)&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Seed mass (ln mg)&#39;</span><span class="p">,</span> <span class="s1">&#39;Seed length (ln mm)&#39;</span><span class="p">,</span> <span class="s1">&#39;Seeds per rep. unit (ln)&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Stem conduit density (ln mm$^-$$^2$)&#39;</span><span class="p">,</span> <span class="s1">&#39;SSD (ln g/cm$^3$)&#39;</span><span class="p">,</span> <span class="s1">&#39;Conduit element length (ln $\mu$m)&#39;</span><span class="p">]</span>
+
+
+<span class="n">plot_scatterplots</span><span class="p">(</span><span class="n">raster_means</span><span class="p">,</span> <span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;Trait&quot;</span><span class="p">,</span> 
+                  <span class="n">variables</span><span class="o">=</span><span class="n">trait</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">trait_names</span><span class="p">,</span> 
+                  <span class="n">label_x</span> <span class="o">=</span> <span class="s2">&quot;sPlotOpen grid&quot;</span><span class="p">,</span> <span class="n">label_y</span> <span class="o">=</span> <span class="s2">&quot;iNaturalist grid&quot;</span><span class="p">,</span>
                  <span class="n">col_wrap</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
 <span class="c1"># Save figure</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../Figures/corr_plots_all_r.pdf&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_70_0.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_70_0.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_80_0.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_80_0.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raster_means</span>
+</pre></div>
 </div>
-<div class="section" id="plot-top-traits-only">
-<h3>Plot top traits only<a class="headerlink" href="#plot-top-traits-only" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x_bin</th>
+      <th>y_bin</th>
+      <th>Trait</th>
+      <th>TraitValue_sPlot</th>
+      <th>TraitValue_iNat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-148.6565</td>
+      <td>69.4065</td>
+      <td>Dispersal unit length</td>
+      <td>0.752731</td>
+      <td>1.337428</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-144.3435</td>
+      <td>69.4690</td>
+      <td>Dispersal unit length</td>
+      <td>1.089437</td>
+      <td>0.298622</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-136.3435</td>
+      <td>62.2810</td>
+      <td>Dispersal unit length</td>
+      <td>1.198785</td>
+      <td>0.901360</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-148.7810</td>
+      <td>70.2810</td>
+      <td>Dispersal unit length</td>
+      <td>0.730777</td>
+      <td>0.903318</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-148.6565</td>
+      <td>70.2810</td>
+      <td>Dispersal unit length</td>
+      <td>0.745368</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>207105</th>
+      <td>12.9065</td>
+      <td>46.5935</td>
+      <td>Conduit element length</td>
+      <td>6.106800</td>
+      <td>5.954530</td>
+    </tr>
+    <tr>
+      <th>207106</th>
+      <td>23.5310</td>
+      <td>56.9690</td>
+      <td>Conduit element length</td>
+      <td>6.306639</td>
+      <td>6.109988</td>
+    </tr>
+    <tr>
+      <th>207107</th>
+      <td>23.4690</td>
+      <td>56.9690</td>
+      <td>Conduit element length</td>
+      <td>6.349083</td>
+      <td>5.981163</td>
+    </tr>
+    <tr>
+      <th>207108</th>
+      <td>23.3435</td>
+      <td>57.0310</td>
+      <td>Conduit element length</td>
+      <td>5.473169</td>
+      <td>5.876802</td>
+    </tr>
+    <tr>
+      <th>207109</th>
+      <td>22.5935</td>
+      <td>57.0310</td>
+      <td>Conduit element length</td>
+      <td>5.945436</td>
+      <td>6.742487</td>
+    </tr>
+  </tbody>
+</table>
+<p>207110 rows × 5 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="plot-top-traits-only">
+<h3>Plot top traits only<a class="headerlink" href="#plot-top-traits-only" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select top traits</span>
@@ -2420,19 +2959,19 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_scatterplots</span><span class="p">(</span><span class="n">raster_means_top</span><span class="p">,</span> <span class="s2">&quot;TraitValue_sPlot&quot;</span><span class="p">,</span> <span class="s2">&quot;TraitValue_iNat&quot;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;Trait&quot;</span><span class="p">,</span> 
                   <span class="n">variables</span><span class="o">=</span><span class="n">top_trait</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">trait_names</span><span class="p">,</span> 
-                  <span class="n">label_x</span> <span class="o">=</span> <span class="s2">&quot;sPlotOpen pixels&quot;</span><span class="p">,</span> <span class="n">label_y</span> <span class="o">=</span> <span class="s2">&quot;iNaturalist pixels&quot;</span><span class="p">,</span> <span class="n">col_wrap</span> <span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+                  <span class="n">label_x</span> <span class="o">=</span> <span class="s2">&quot;sPlotOpen grid&quot;</span><span class="p">,</span> <span class="n">label_y</span> <span class="o">=</span> <span class="s2">&quot;iNaturalist grid&quot;</span><span class="p">,</span> <span class="n">col_wrap</span> <span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="c1"># Save figure</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../Figures/corr_plots_top6.pdf&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_73_0.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_73_0.png" />
+<img alt="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_84_0.png" src="_images/Chapter_6_Compare_trait_maps_sPlot_iNat_84_0.png" />
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2456,9 +2995,11 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="Chapter_5_Make_trait_maps.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2474,24 +3015,28 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Sophie Wolf et al.<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Sophie Wolf et al.<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
