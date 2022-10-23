@@ -2,7 +2,10 @@
 
 # Citizen science plant observations encode global trait patterns
 
-This repository hosts additional material accompanying the manuscript *Citizen science plant observations encode global trait patterns*.
+This repository hosts additional material accompanying the publication:
+
+Wolf, S. and Mahecha, M. D. and Sabatini, F. M. and Wirth, C. and Bruelheide, H. and Kattge, J. and Moreno Martínez, Á. and Mora, K. and Kattenborn, T., *Citizen science plant observations encode global trait patterns*. Nat Ecol Evol (2022). https://doi.org/10.1038/s41559-022-01904-x
+
 
   1. The entire workflow documentation: https://sojwolf.github.io/iNaturalist_traits/
   2. GeoTiff trait maps based on iNaturalist observations and sPlotOpen observations, respectively
