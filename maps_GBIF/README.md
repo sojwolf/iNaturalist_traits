@@ -9,6 +9,10 @@ Source of species observations are GBIF sampled as such:
   3. From each hexagon were then sampled 10,000 observations. If a hexagon contained less than 10,000 observations, all observations were kept.
   4. This GBIF subsample contained approx. 35,000,000 observations
 
+
+![Density GBIF](obs_density_GBIF_sample.PNG)
+
+
 TRY traits:
 
 ## Trait all_maps
