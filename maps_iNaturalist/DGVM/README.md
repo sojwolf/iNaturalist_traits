@@ -1,10 +1,16 @@
-DGVM variables README
+# DGVM relevant variables
 
+## Trait maps
+
+All trait maps depict ln-transformed traits, unless stated otherwise.
+
+## Data
 The maps in this folder were generated with the following iNaturalist data: GBIF.org (11 November 2022) GBIF Occurrence Download https://doi.org/10.15468/dl.g3vdmb
 
 The following traits from the TRY database were downloaded 21 November 2022:
 
 12, 59, 6, 1080, 37, 3479, 42, 22, 269, 186, 3106, 3115, 3116, 3117
+
 
 | Trait   | ID     | Unit    |
 | :------------- | :----------: | -----------: |
