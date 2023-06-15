@@ -28,4 +28,4 @@ The following traits from the TRY database were downloaded 21 November 2022:
 
 ## Correlation of sPlotOpen and GBIF sample for all traits at different resolutions
 
-![Corr Plot](Correlation_sPlot.PNG)
+![Corr Plot](Correlation_sPlot.png)
