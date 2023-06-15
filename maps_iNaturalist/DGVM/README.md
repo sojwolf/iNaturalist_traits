@@ -26,4 +26,6 @@ The following traits from the TRY database were downloaded 21 November 2022:
 | SLA| 14 |  |
 | Plant.Height | 15|  |     
 
-The maps were NOT tested for quality.
+## Correlation of sPlotOpen and GBIF sample for all traits at different resolutions
+
+![Corr Plot](Correlation_sPlot.PNG)
