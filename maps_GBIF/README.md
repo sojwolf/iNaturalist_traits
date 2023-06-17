@@ -7,6 +7,8 @@ Here you will find trait maps based on GBIF data and traits found in the TRY gap
 The folder *traitmaps* contains simple maps with the mean ln-transformed trait values for each pixel. The folder *more_layers* contains .grd files with more layers: **observation count, mean, median, and standard deviation**. These can be loaded as a brick of layers in R as follows:
 
 ```
+library(raster)
+
 test <- brick("file.grd")
 plot(test)
 ```
