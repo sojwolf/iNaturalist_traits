@@ -2,9 +2,9 @@
 
 ## Trait maps
 
-Here you will find trait maps based on GBIF data and traits found in the TRY gap-filled dataset in GeoTIFF format at a 0.2°, 0.5°, and 2° resolutions. Each folder also contains the sPlotOpen maps for all respective traits and resolutions.
+Here you will find trait maps based on GBIF data and traits found in the TRY gap-filled dataset in GeoTIFF format at a 0.2°, 0.5°, and 2° resolutions. Each folder also contains the sPlotOpen-based maps for all respective traits and resolutions.
 
-The folder *traitmaps* contains simple maps with the mean ln-transformed trait values for each pixel. The folder *more_layers* contains .grd files with more layers: **observation count, mean, median, and standard deviation**. These can be loaded as a brick of layers in R as follows:
+The folder *traitmaps* contains .grd files for each trait (see list below) with multiple layers: **observation count, mean, median, standard deviation, 05% quantile, 95% quantile**. These can be loaded as a brick of layers in R as follows:
 
 ```
 library(raster)
@@ -13,11 +13,18 @@ test <- brick("file.grd")
 plot(test)
 ```
 
+The subfolders in the *traitmaps* directory are organized as follows:
+* The first subfolder classifies the plant functional types integrated with
+	* *Shrub_Tree_Grass* including species of all plant functional types.
+	* *Shrub_Tree* including shrub and tree species.
+	* *Grass* for grassland species only.
+* Each of these subolders contains subfolders for map products at 0.2, 0.5 and 2.0 degrees (longitude, latitude)
+
 ## Data
 
 Source of species observations are GBIF sampled as such:
   1. GBIF download: https://doi.org/10.15468/dl.fe2kv3
-  2. The observations were then linked to the TRY gap-filled dataset, which resulted in a total of n= observations. 90% of the GBIF observations were matched, 70% of species in TRY, and 24% of species in GBIF
+  2. The observations were then linked to the TRY gap-filled dataset, which resulted in a total of n= observations. 90% of the GBIF observations were matched, 70% of species in TRY, and 24% of species in GBIF (numbers based for map products using all plant functional types).
   3. Matched observations were then binned into equal area hexagons (using the package size hex9, which corresponds to about 0.5 degrees at equator)
   4. From each hexagon were then sampled 10,000 observations. If a hexagon contained less than 10,000 observations, all observations were kept.
   5. This GBIF subsample contained approx. 35,000,000 observations
@@ -66,4 +73,5 @@ Figure 1: Global density of GBIF subsample at 2° resolution.
 
 ## Correlation of sPlotOpen and GBIF sample for all traits at different resolutions
 
+The correlations (based on all plant functional types) between sPlotOpen and GBIF-based maps were calculated as in Wolf et al. 2022.
 ![Corr Plot](corr_res.PNG)
