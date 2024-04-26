@@ -17,6 +17,24 @@ plot(test)
 
 Source of species observations are GBIF sampled as such:
   1. GBIF download: https://doi.org/10.15468/dl.fe2kv3
+Creation Date: 16:44:41 2 June 2023
+Records included: 257357303 records from 6840 published datasets
+Compressed data size: 29.6 GB
+Download format: simple tab-separated values (TSV)
+Filter used:
+{
+"and" : [
+  "BasisOfRecord is one of (Observation, Human Observation, Occurrence evidence)",
+  "DistanceFromCentroidInMeters is greater than or equal to 1500.0",
+  "HasCoordinate is true",
+  "HasGeospatialIssue is false",
+  "IsInCluster is false",
+  "OccurrenceStatus is Present",
+  "TaxonKey is Tracheophyta",
+  "Year 1900-2023"
+]
+}
+
   2. The observations were then linked to the TRY gap-filled dataset, which resulted in a total of n= observations. 90% of the GBIF observations were matched, 70% of species in TRY, and 24% of species in GBIF
   3. Matched observations were then binned into equal area hexagons (using the package size hex9, which corresponds to about 0.5 degrees at equator)
   4. From each hexagon were then sampled 10,000 observations. If a hexagon contained less than 10,000 observations, all observations were kept.
